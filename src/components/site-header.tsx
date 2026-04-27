@@ -123,7 +123,7 @@ function MobileNav() {
               >
                 <div className="mb-6 flex items-center justify-between">
                   <span className="text-lg font-semibold tracking-[-0.02em] text-white">
-                    PetrolLink
+                    Petrowave Energy Limited
                   </span>
                   <Dialog.Close className="rounded-full border border-white/20 p-2 text-white">
                     <X className="size-4" />
@@ -197,7 +197,7 @@ function MobileNav() {
                 <Link
                   href="/contact"
                   onClick={() => setOpen(false)}
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-[#f47a30] px-4 py-3 text-sm font-semibold tracking-[-0.015em] text-[#1b2434] transition hover:bg-[#ff8a3d]"
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-[#f47a30] px-4 py-3 text-sm font-semibold tracking-[-0.015em] text-white transition hover:bg-[#ff8a3d]"
                 >
                   Request A Quote
                 </Link>
@@ -214,7 +214,9 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-white/15 bg-[#071325]/65 backdrop-blur-xl">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="inline-flex items-center gap-2">
+        <MobileNav />
+
+        <Link href="/" className="inline-flex items-center gap-2 lg:mr-0">
           <Image
             src="/petrowave-logo.png"
             alt="Petrowave Energy Limited"
@@ -237,8 +239,6 @@ export function SiteHeader() {
             Request A Quote
           </Link>
         </div>
-
-        <MobileNav />
       </div>
     </header>
   );

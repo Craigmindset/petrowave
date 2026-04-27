@@ -38,16 +38,16 @@ export default function Home() {
                 measurable long-term value.
               </p>
 
-              <div className="mt-10 flex flex-wrap items-center gap-4">
+              <div className="mt-10 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center rounded-full bg-[#f47a30] px-6 py-3 text-sm font-semibold tracking-[-0.015em] text-[#162235] transition hover:bg-[#ff8a3d]"
+                  className="inline-flex items-center justify-center rounded-full bg-[#f47a30] px-4 py-3 text-xs font-semibold tracking-[-0.015em] text-[#162235] transition hover:bg-[#ff8a3d] sm:px-6 sm:text-sm"
                 >
                   Request a Quote
                 </Link>
                 <Link
                   href="/investors/investment-presentation"
-                  className="inline-flex items-center rounded-full border border-white/35 px-6 py-3 text-sm font-semibold tracking-[-0.015em] text-white transition hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-full border border-white/35 px-4 py-3 text-xs font-semibold tracking-[-0.015em] text-white transition hover:bg-white/10 sm:px-6 sm:text-sm"
                 >
                   Become a Partner
                 </Link>
@@ -69,7 +69,7 @@ export default function Home() {
                   <AnimatedReveal delay={0.15}>
                     <article className="grid gap-4 rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl">
                       <div className="flex items-center justify-between gap-4">
-                        <h2 className="text-xl font-semibold tracking-[-0.03em] text-white">
+                        <h2 className="text-sm md:text-xl font-semibold tracking-[-0.03em] text-white">
                           Built for modern energy projects
                         </h2>
                         <button

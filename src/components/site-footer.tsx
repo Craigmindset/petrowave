@@ -64,19 +64,6 @@ const socialLinks = [
   },
 
   {
-    label: "Discord",
-    href: "https://discord.com",
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M20.2 4.8A17.8 17.8 0 0 0 15.8 3l-.2.5a12 12 0 0 1 3.6 1.7 11 11 0 0 0-10.4 0A12 12 0 0 1 12.4 3l-.2-.5a17.8 17.8 0 0 0-4.4 1.8C5 8.3 4.2 12.2 4.6 16c1.7 1.2 3.4 1.9 5.1 2.4l1.2-1.9c-.7-.2-1.3-.5-1.9-.8l.5-.4c2.3 1.1 4.8 1.1 7.1 0l.5.4c-.6.3-1.2.6-1.9.8l1.2 1.9c1.7-.5 3.4-1.2 5.1-2.4.5-4.3-.8-8.1-2.3-11.2zM9.6 13.6c-.7 0-1.3-.7-1.3-1.5s.6-1.5 1.3-1.5c.7 0 1.3.7 1.3 1.5s-.6 1.5-1.3 1.5zm4.8 0c-.7 0-1.3-.7-1.3-1.5s.6-1.5 1.3-1.5 1.3.7 1.3 1.5-.6 1.5-1.3 1.5z"
-        />
-      </svg>
-    ),
-  },
-
-  {
     label: "Instagram",
     href: "https://instagram.com",
     icon: (
@@ -84,19 +71,6 @@ const socialLinks = [
         <path
           fill="currentColor"
           d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM18.4 6.8a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4zM12 2.8c2.8 0 3.1 0 4.2.1 1 .1 1.6.2 2 .4.5.2.9.4 1.3.8.4.4.6.8.8 1.3.2.4.4 1 .4 2 .1 1.1.1 1.4.1 4.2s0 3.1-.1 4.2c-.1 1-.2 1.6-.4 2a3.3 3.3 0 0 1-2.1 2.1c-.4.2-1 .4-2 .4-1.1.1-1.4.1-4.2.1s-3.1 0-4.2-.1c-1-.1-1.6-.2-2-.4a3.3 3.3 0 0 1-2.1-2.1c-.2-.4-.4-1-.4-2C2.8 15.1 2.8 14.8 2.8 12s0-3.1.1-4.2c.1-1 .2-1.6.4-2 .2-.5.4-.9.8-1.3.4-.4.8-.6 1.3-.8.4-.2 1-.4 2-.4 1.1-.1 1.4-.1 4.2-.1zm0-1.8C9.1 1 8.8 1 7.7 1.1c-1.1.1-1.9.2-2.6.5a5 5 0 0 0-1.8 1.2A5 5 0 0 0 2.1 4.6c-.3.7-.4 1.5-.5 2.6C1.5 8.3 1.5 8.6 1.5 12s0 3.7.1 4.8c.1 1.1.2 1.9.5 2.6a5 5 0 0 0 1.2 1.8 5 5 0 0 0 1.8 1.2c.7.3 1.5.4 2.6.5 1.1.1 1.4.1 4.3.1s3.2 0 4.3-.1c1.1-.1 1.9-.2 2.6-.5a5 5 0 0 0 1.8-1.2 5 5 0 0 0 1.2-1.8c.3-.7.4-1.5.5-2.6.1-1.1.1-1.4.1-4.8s0-3.7-.1-4.8c-.1-1.1-.2-1.9-.5-2.6a5 5 0 0 0-1.2-1.8 5 5 0 0 0-1.8-1.2c-.7-.3-1.5-.4-2.6-.5C15.2 1 14.9 1 12 1z"
-        />
-      </svg>
-    ),
-  },
-
-  {
-    label: "YouTube",
-    href: "https://youtube.com",
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
-        <path
-          fill="currentColor"
-          d="M23 12s0-3.3-.4-4.9c-.2-.9-.9-1.6-1.8-1.8C19.2 5 12 5 12 5s-7.2 0-8.8.3c-.9.2-1.6.9-1.8 1.8C1 8.7 1 12 1 12s0 3.3.4 4.9c.2.9.9 1.6 1.8 1.8 1.6.3 8.8.3 8.8.3s7.2 0 8.8-.3c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.9.4-4.9zM9.7 15.8V8.2l6.3 3.8-6.3 3.8z"
         />
       </svg>
     ),
@@ -133,8 +107,11 @@ export function SiteFooter() {
     <footer className="border-t border-white/15 bg-black py-14 text-white">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.1fr_1.9fr]">
-          <section className="space-y-5 lg:pr-6">
-            <Link href="/" className="inline-flex items-center gap-3">
+          <section className="space-y-5 text-center lg:pr-6 lg:text-left">
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center gap-3 lg:justify-start"
+            >
               <Image
                 src="/petrowave-logo.png"
                 alt="Petrolwave Energy Limited logo"
@@ -147,11 +124,17 @@ export function SiteFooter() {
               </span>
             </Link>
 
-            <p className="max-w-sm text-sm tracking-tight text-white/85">
-              The ultimate link to excellence in the oil energy sector.
+            <p className="mx-auto max-w-sm text-sm tracking-tight text-white/85 lg:mx-0">
+              Petrolwave Energy Limited provides integrated procurement,
+              upstream, downstream, offshore, and sustainability services for
+              ambitious energy operators. We connect operational rigor with
+              measurable long-term value..
             </p>
 
-            <nav aria-label="Social links" className="flex items-center gap-2">
+            <nav
+              aria-label="Social links"
+              className="flex items-center justify-center gap-2 lg:justify-start"
+            >
               {socialLinks.map((social) => (
                 <Link
                   key={social.label}
@@ -167,12 +150,12 @@ export function SiteFooter() {
             </nav>
           </section>
 
-          <div className="grid grid-cols-2 gap-x-8 gap-y-8 sm:gap-x-10 lg:grid-cols-4">
-            <nav aria-label="Why us links" className="space-y-4">
+          <div className="grid grid-cols-2 gap-x-8 gap-y-6 sm:gap-x-10 lg:grid-cols-4 lg:gap-y-8">
+            <nav aria-label="Why us links" className="space-y-3">
               <h2 className="text-sm font-semibold tracking-tight text-white">
                 Why us
               </h2>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {whyUsLinks.map((item) => (
                   <li key={item.label}>
                     <FooterLink href={item.href} label={item.label} />
@@ -181,11 +164,11 @@ export function SiteFooter() {
               </ul>
             </nav>
 
-            <nav aria-label="Who we are links" className="space-y-4">
+            <nav aria-label="Who we are links" className="space-y-3">
               <h2 className="text-sm font-semibold tracking-tight text-white">
                 Who we are
               </h2>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {whoWeAreLinks.map((item) => (
                   <li key={item.label}>
                     <FooterLink href={item.href} label={item.label} />
@@ -194,11 +177,11 @@ export function SiteFooter() {
               </ul>
             </nav>
 
-            <nav aria-label="Partner links" className="space-y-4">
+            <nav aria-label="Partner links" className="space-y-2">
               <h2 className="text-sm font-semibold tracking-tight text-white">
                 Partner with us
               </h2>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {partnerLinks.map((item) => (
                   <li key={item.label}>
                     <FooterLink href={item.href} label={item.label} />
@@ -207,11 +190,11 @@ export function SiteFooter() {
               </ul>
             </nav>
 
-            <nav aria-label="Support links" className="space-y-4">
+            <nav aria-label="Support links" className="space-y-2">
               <h2 className="text-sm font-semibold tracking-tight text-white">
                 Support
               </h2>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-2">
                 {supportLinks.map((item) => (
                   <li key={item.label}>
                     <FooterLink href={item.href} label={item.label} />
