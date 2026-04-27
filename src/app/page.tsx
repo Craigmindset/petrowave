@@ -1,12 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedReveal } from "@/components/animated-reveal";
+import { IndustryCarousel } from "@/components/industry-carousel";
+import { ServiceSection } from "@/components/service-section";
 
 export default function Home() {
   const [isCardOpen, setIsCardOpen] = useState(true);
+
+  useEffect(() => {
+    const stored = window.localStorage.getItem("petrowave.heroCardOpen");
+    if (stored === "false") {
+      setIsCardOpen(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("petrowave.heroCardOpen", String(isCardOpen));
+  }, [isCardOpen]);
 
   return (
     <main>
@@ -149,35 +162,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-6 py-16 sm:py-20">
-        <div className="mx-auto grid w-full max-w-6xl gap-6 md:grid-cols-3">
-          {[
-            {
-              title: "Procurement Intelligence",
-              body: "Data-backed sourcing, supplier quality controls, and schedule assurance for complex energy projects.",
-            },
-            {
-              title: "Sustainable Operations",
-              body: "Environmental and ESG frameworks integrated into execution, reporting, and stakeholder governance.",
-            },
-            {
-              title: "Investor Readiness",
-              body: "Transparent portfolio strategy, robust oversight, and disciplined capital deployment.",
-            },
-          ].map((card, index) => (
-            <AnimatedReveal key={card.title} delay={index * 0.08}>
-              <article className="h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5">
-                <h2 className="text-xl font-semibold tracking-tight text-[#0b1a2e]">
-                  {card.title}
-                </h2>
-                <p className="mt-3 text-sm leading-6 tracking-[-0.01em] text-slate-700 sm:text-base">
-                  {card.body}
-                </p>
-              </article>
-            </AnimatedReveal>
-          ))}
-        </div>
-      </section>
+      <IndustryCarousel />
+
+      <ServiceSection />
     </main>
   );
 }

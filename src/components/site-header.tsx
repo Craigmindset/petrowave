@@ -122,7 +122,7 @@ function MobileNav() {
                 className="fixed right-0 top-0 z-50 flex h-dvh w-[70vw] max-w-[70vw] flex-col overflow-y-auto border-l border-white/10 bg-[#0a1628] p-6"
               >
                 <div className="mb-6 flex items-center justify-between">
-                  <span className="text-lg font-semibold tracking-[-0.02em] text-white">
+                  <span className="text-xs font-semibold tracking-[-0.02em] text-white">
                     Petrowave Energy Limited
                   </span>
                   <Dialog.Close className="rounded-full border border-white/20 p-2 text-white">
@@ -214,9 +214,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-white/15 bg-[#071325]/65 backdrop-blur-xl">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <MobileNav />
-
-        <Link href="/" className="inline-flex items-center gap-2 lg:mr-0">
+        <Link href="/" className="inline-flex items-center gap-2">
           <Image
             src="/petrowave-logo.png"
             alt="Petrowave Energy Limited"
@@ -225,7 +223,7 @@ export function SiteHeader() {
             className="h-8 w-8"
           />
           <span className="text-sm font-semibold tracking-[-0.03em] text-white">
-            Petrowave Energy Limited
+            Petrolwave Energy Limited
           </span>
         </Link>
 
@@ -239,6 +237,8 @@ export function SiteHeader() {
             Request A Quote
           </Link>
         </div>
+
+        <MobileNav />
       </div>
     </header>
   );

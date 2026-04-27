@@ -124,7 +124,7 @@ export function SiteFooter() {
               </span>
             </Link>
 
-            <p className="mx-auto max-w-sm text-sm tracking-tight text-white/85 lg:mx-0">
+            <p className="text-justify justify-centermx-auto max-w-sm text-sm tracking-tight text-white/85 lg:mx-0">
               Petrolwave Energy Limited provides integrated procurement,
               upstream, downstream, offshore, and sustainability services for
               ambitious energy operators. We connect operational rigor with
@@ -133,7 +133,7 @@ export function SiteFooter() {
 
             <nav
               aria-label="Social links"
-              className="flex items-center justify-center gap-2 lg:justify-start"
+              className="flex items-center justify-center gap-5 lg:justify-start"
             >
               {socialLinks.map((social) => (
                 <Link
