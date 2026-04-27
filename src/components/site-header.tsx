@@ -5,6 +5,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -214,9 +215,15 @@ export function SiteHeader() {
     <header className="sticky top-0 z-30 border-b border-white/15 bg-[#071325]/65 backdrop-blur-xl">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="inline-flex items-center gap-2">
-          <span className="inline-block size-2 rounded-full bg-[#f47a30]" />
-          <span className="text-lg font-semibold tracking-[-0.03em] text-white">
-            PetrolLink
+          <Image
+            src="/petrowave-logo.png"
+            alt="Petrowave Energy Limited"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+          />
+          <span className="text-sm font-semibold tracking-[-0.03em] text-white">
+            Petrowave Energy Limited
           </span>
         </Link>
 

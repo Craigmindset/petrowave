@@ -20,7 +20,7 @@ export default function Home() {
               <p className="mb-5 text-sm font-bold uppercase tracking-[0.12em] text-[#ffb082] sm:font-medium sm:text-base lg:text-xs">
                 we at Petrowave Energy Limited
               </p>
-              <h1 className="text-[1.8rem] font-bold leading-[0.95] tracking-[-0.05em] uppercase text-white sm:font-semibold sm:text-6xl sm:normal-case lg:text-6xl">
+              <h1 className="text-[1.8rem] font-bold leading-[0.95] tracking-tighter uppercase text-white sm:font-semibold sm:text-6xl sm:normal-case lg:text-6xl">
                 <span className="mb-2 block whitespace-nowrap sm:mb-0">
                   Powering Progress
                 </span>
@@ -74,7 +74,7 @@ export default function Home() {
                         </h2>
                         <button
                           onClick={() => setIsCardOpen(false)}
-                          className="ml-auto flex-shrink-0 text-white/60 transition hover:text-white"
+                          className="ml-auto shrink-0 text-white/60 transition hover:text-white"
                           aria-label="Close card"
                         >
                           <svg
@@ -92,14 +92,14 @@ export default function Home() {
                           </svg>
                         </button>
                       </div>
-                      <p className="text-sm leading-6 tracking-[-0.01em] text-slate-100">
-                        We align technical teams, strategic procurement, and responsible
-                        governance to deliver stable execution in high-pressure
-                        environments.
+                      <p className="text-sm leading-6 tracking-[-0.01em] text-slate-100 ">
+                        We align technical teams, strategic procurement, and
+                        responsible governance to deliver stable execution in
+                        high-pressure environments.
                       </p>
                       <div className="grid grid-cols-2 gap-3 pt-2 text-sm text-slate-100">
                         <div className="rounded-xl border border-white/20 bg-[#081426]/45 p-3">
-                          <p className="text-xl font-semibold tracking-[-0.03em]">
+                          <p className="text-sm font-semibold tracking-[-0.03em]">
                             Midstream
                           </p>
                           <p className="mt-1 text-xs uppercase tracking-[0.12em] text-slate-300">
@@ -107,7 +107,7 @@ export default function Home() {
                           </p>
                         </div>
                         <div className="rounded-xl border border-white/20 bg-[#081426]/45 p-3">
-                          <p className="text-xl font-semibold tracking-[-0.03em]">
+                          <p className="text-sm font-semibold tracking-[-0.03em]">
                             Downstream
                           </p>
                           <p className="mt-1 text-xs uppercase tracking-[0.12em] text-slate-300">
@@ -167,7 +167,7 @@ export default function Home() {
           ].map((card, index) => (
             <AnimatedReveal key={card.title} delay={index * 0.08}>
               <article className="h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm shadow-slate-900/5">
-                <h2 className="text-xl font-semibold tracking-[-0.025em] text-[#0b1a2e]">
+                <h2 className="text-xl font-semibold tracking-tight text-[#0b1a2e]">
                   {card.title}
                 </h2>
                 <p className="mt-3 text-sm leading-6 tracking-[-0.01em] text-slate-700 sm:text-base">

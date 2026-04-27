@@ -11,9 +11,12 @@ const jakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "PetrolLink | The Link to Petro Excellence",
+  title: "Petrowave Energy Limited ",
   description:
     "PetrolLink is a modern energy sector partner delivering procurement, upstream, downstream, offshore, sustainability, and investor-ready execution.",
+  icons: {
+    icon: "/petrowave-logo.png",
+  },
 };
 
 export default function RootLayout({
