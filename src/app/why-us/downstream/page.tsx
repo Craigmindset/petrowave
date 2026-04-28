@@ -62,7 +62,7 @@ export default function DownstreamPage() {
               <p className="mt-4 whitespace-pre-line text-sm leading-7 tracking-tight text-slate-700 sm:text-base">
                 {`Petrowave Energy Limited is committed to delivering dependable petroleum products marketing services, built on integrity, strong logistics capability, and a deep understanding of market dynamics. As a growing player in the energy sector, we are focused on bridging supply gaps and ensuring that high-quality petroleum products reach end-users efficiently and safely.`}
               </p>
-              <p className="mt-2 whitespace-pre-line font-bold text-sm leading-7 tracking-tight text-slate-700 sm:text-xl">
+              <p className="mt-2 whitespace-pre-line font-bold text-2xl leading-7 tracking-tight text-slate-700 sm:text-xl">
                 {`Supply & Distribution Capability.`}
               </p>
               <p className="mt-4 whitespace-pre-line text-sm leading-7 tracking-tight text-slate-700 sm:text-base">
