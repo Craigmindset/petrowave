@@ -65,12 +65,12 @@ export const navGroups: NavGroup[] = [
 
 export const subPageContent: Record<string, SubPageContent> = {
   "/who-we-are/we-started-well": {
-    title: "We Started Well | PetrolLink",
+    title: "We Started Well | Petrowave Energy Limited",
     description:
-      "Discover PetrolLink's origin story, operational discipline, and commitment to energy excellence from day one.",
-    heading: "Built on disciplined beginnings",
+      "Discover Petrowave Energy Limited's origin story, operational discipline, and commitment to energy excellence from day one.",
+    heading: "Who we are",
     intro:
-      "PetrolLink began with a clear mandate: create reliable value chains between upstream producers, technical service teams, and industrial buyers. Our foundation is structured execution, transparent reporting, and measurable outcomes.",
+      "Petrowave Energy Limited is a proudly Nigerian oil and gas company headquartered in Port Harcourt, at the heart of one of Africa’s most vital energy hubs. We are committed to delivering reliable, efficient, and responsible energy solutions across the upstream, midstream, and downstream sectors",
     highlights: [
       "Operational systems designed for traceability and speed.",
       "Leadership with deep regional and global project exposure.",

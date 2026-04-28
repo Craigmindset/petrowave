@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import * as Accordion from "@radix-ui/react-accordion";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -223,7 +223,7 @@ export function SiteHeader() {
             className="h-8 w-8"
           />
           <span className="text-sm font-semibold tracking-[-0.03em] text-white">
-            Petrolwave Energy Limited
+            Petrowave Energy Limited
           </span>
         </Link>
 
@@ -243,3 +243,4 @@ export function SiteHeader() {
     </header>
   );
 }
+

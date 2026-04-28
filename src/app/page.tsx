@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -45,7 +45,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="mt-7 max-w-2xl text-base font-semibold leading-7 tracking-[-0.01em] text-slate-200 sm:font-normal sm:text-lg">
-                Petrolwave Energy Limited provides integrated procurement,
+                Petrowave Energy Limited provides integrated procurement,
                 upstream, downstream, offshore, and sustainability services for
                 ambitious energy operators. We connect operational rigor with
                 measurable long-term value.
@@ -168,3 +168,4 @@ export default function Home() {
     </main>
   );
 }
+

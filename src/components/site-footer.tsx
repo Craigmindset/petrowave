@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -114,18 +114,18 @@ export function SiteFooter() {
             >
               <Image
                 src="/petrowave-logo.png"
-                alt="Petrolwave Energy Limited logo"
+                alt="Petrowave Energy Limited logo"
                 width={36}
                 height={36}
                 className="h-9 w-9"
               />
               <span className="text-base font-semibold tracking-tight text-white">
-                Petrolwave Energy Limited
+                Petrowave Energy Limited
               </span>
             </Link>
 
             <p className="text-justify justify-centermx-auto max-w-sm text-sm tracking-tight text-white/85 lg:mx-0">
-              Petrolwave Energy Limited provides integrated procurement,
+              Petrowave Energy Limited provides integrated procurement,
               upstream, downstream, offshore, and sustainability services for
               ambitious energy operators. We connect operational rigor with
               measurable long-term value..
@@ -207,7 +207,7 @@ export function SiteFooter() {
 
         <div className="mt-12 border-t border-white/15 pt-6 text-center">
           <p className="text-xs tracking-tight text-white/70">
-            © {year} Petrowave Energy Limited. All rights reserved.
+            Â© {year} Petrowave Energy Limited. All rights reserved.
           </p>
         </div>
       </div>
@@ -227,3 +227,4 @@ export function SiteFooter() {
     </footer>
   );
 }
+

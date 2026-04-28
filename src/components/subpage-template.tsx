@@ -4,39 +4,77 @@ import { type SubPageContent } from "@/lib/site-data";
 
 type SubPageTemplateProps = {
   content: SubPageContent;
+  useHeroBackground?: boolean;
+  heroBackgroundImage?: string;
+  children?: React.ReactNode;
 };
 
-export function SubPageTemplate({ content }: SubPageTemplateProps) {
+export function SubPageTemplate({
+  content,
+  useHeroBackground = false,
+  heroBackgroundImage,
+  children,
+}: SubPageTemplateProps) {
   return (
     <main>
-      <section className="relative isolate overflow-hidden border-b border-slate-300/20 bg-[#0a1628] px-6 py-20 text-white sm:py-24">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(244,122,48,0.22),transparent_50%),radial-gradient(circle_at_80%_10%,rgba(40,102,165,0.24),transparent_45%)]" />
-        <div className="mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <AnimatedReveal>
-            <article>
-              <h1 className="max-w-2xl text-4xl font-semibold tracking-[-0.035em] text-white sm:text-5xl">
-                {content.heading}
-              </h1>
-              <p className="mt-5 max-w-xl text-base leading-7 tracking-[-0.01em] text-slate-200 sm:text-lg">
-                {content.intro}
-              </p>
-            </article>
-          </AnimatedReveal>
+      {useHeroBackground ? (
+        <section className="relative isolate overflow-hidden border-b border-white/10 px-6 py-20 text-white sm:py-24">
+          <div className="absolute inset-0 -z-20">
+            <Image
+              src={heroBackgroundImage ?? content.image}
+              alt={`${content.heading} visual representing PetrolLink operations`}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="absolute inset-0 -z-10 bg-[linear-gradient(110deg,rgba(6,16,30,0.9),rgba(6,16,30,0.58))]" />
 
-          <AnimatedReveal delay={0.1}>
-            <div className="overflow-hidden rounded-2xl border border-white/20 bg-white/5">
-              <Image
-                src={content.image}
-                alt={`${content.heading} visual representing PetrolLink operations`}
-                width={1280}
-                height={720}
-                className="h-full w-full object-cover"
-                priority
-              />
-            </div>
-          </AnimatedReveal>
-        </div>
-      </section>
+          <div className="mx-auto w-full max-w-6xl">
+            <AnimatedReveal>
+              <article className="max-w-3xl">
+                <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                  {content.heading}
+                </h1>
+                <p className="mt-5 text-base leading-7 tracking-tight text-slate-200 sm:text-lg">
+                  {content.intro}
+                </p>
+              </article>
+            </AnimatedReveal>
+          </div>
+        </section>
+      ) : (
+        <section className="relative isolate overflow-hidden border-b border-slate-300/20 bg-[#0a1628] px-6 py-20 text-white sm:py-24">
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(244,122,48,0.22),transparent_50%),radial-gradient(circle_at_80%_10%,rgba(40,102,165,0.24),transparent_45%)]" />
+          <div className="mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <AnimatedReveal>
+              <article>
+                <h1 className="max-w-2xl text-4xl font-semibold tracking-[-0.035em] text-white sm:text-5xl">
+                  {content.heading}
+                </h1>
+                <p className="mt-5 max-w-xl text-base leading-7 tracking-[-0.01em] text-slate-200 sm:text-lg">
+                  {content.intro}
+                </p>
+              </article>
+            </AnimatedReveal>
+
+            <AnimatedReveal delay={0.1}>
+              <div className="overflow-hidden rounded-2xl border border-white/20 bg-white/5">
+                <Image
+                  src={content.image}
+                  alt={`${content.heading} visual representing PetrolLink operations`}
+                  width={1280}
+                  height={720}
+                  className="h-full w-full object-cover"
+                  priority
+                />
+              </div>
+            </AnimatedReveal>
+          </div>
+        </section>
+      )}
+
+      {children}
 
       <section className="bg-white px-6 py-16 sm:py-20">
         <div className="mx-auto grid w-full max-w-6xl gap-8 md:grid-cols-[0.95fr_1.05fr]">

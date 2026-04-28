@@ -12,5 +12,5 @@ export const metadata = buildMetadata({
 });
 
 export default function ProcurementPage() {
-  return <SubPageTemplate content={content} />;
+  return <SubPageTemplate content={content} useHeroBackground />;
 }

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -241,7 +241,7 @@ export function ContactSection() {
                     className="mt-0.5 h-4 w-4 rounded-sm border-slate-300 text-[#f47a30] focus:ring-[#f47a30]/40"
                   />
                   <span>
-                    I consent to Petrolwave Energy Limited processing my data
+                    I consent to Petrowave Energy Limited processing my data
                     for support and response purposes.
                   </span>
                 </label>
@@ -321,3 +321,4 @@ export function ContactSection() {
     </main>
   );
 }
+
