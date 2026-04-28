@@ -20,12 +20,12 @@ const services: ServiceCard[] = [
     href: "/why-us/upstream",
   },
   {
-    title: "Offshore Project Delivery",
+    title: "Petroleum Products Marketing",
     description:
-      "Disciplined offshore execution with safety-first logistics, marine coordination, and schedule control for complex work scopes.",
+      "At Petrowave Energy Limited, we deliver reliable petroleum product supply and distribution, including PMS, diesel, and jet fuel, with efficiency and trust.",
     image: "/petro-truck-distribute.jpg",
-    alt: "Petrowave field workers supporting offshore operations",
-    href: "/why-us/offshore",
+    alt: "Petroleum products marketing and distribution operations",
+    href: "/why-us/downstream",
   },
   {
     title: "Strategic Procurement",
