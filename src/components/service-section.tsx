@@ -28,10 +28,10 @@ const services: ServiceCard[] = [
     href: "/why-us/downstream",
   },
   {
-    title: "Strategic Procurement",
+    title: "Procurement and Offshore Services",
     description:
-      "End-to-end sourcing for critical equipment and materials with supplier vetting, quality assurance, and predictable lead times.",
-    image: "/petrowave-vaule-sealing.jpg",
+      "Delivering efficient offshore intake and offtake services, ensuring secure product transfer, logistics coordination, and reliable supply continuity.",
+    image: "/procurement-petrowave.jpg",
     alt: "Business value and contract sealing in energy procurement",
     href: "/why-us/procurement",
   },

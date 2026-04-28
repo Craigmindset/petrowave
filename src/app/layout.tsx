@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { KnowledgeAssistant } from "@/components/knowledge-assistant";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
@@ -31,6 +32,7 @@ export default function RootLayout({
           <SiteHeader />
           <div className="flex-1">{children}</div>
           <SiteFooter />
+          <KnowledgeAssistant />
         </div>
       </body>
     </html>
