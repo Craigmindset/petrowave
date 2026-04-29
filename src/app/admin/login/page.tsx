@@ -76,7 +76,7 @@ export default function AdminLoginPage() {
           Welcome back
         </h1>
         <p className="mt-2 text-sm tracking-tight text-slate-200">
-          Sign in with your admin email and password to access the dashboard.
+          Sign in with your admin email and password
         </p>
 
         <form className="mt-7 space-y-4" onSubmit={handleSubmit}>

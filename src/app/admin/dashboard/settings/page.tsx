@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { isSupabaseConfigured, supabase } from "@/lib/supabase";
 
 export default function AdminSettingsPage() {
   const [inviteEmail, setInviteEmail] = useState("");
@@ -9,17 +10,43 @@ export default function AdminSettingsPage() {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [toast, setToast] = useState<string | null>(null);
+  const [isSendingInvite, setIsSendingInvite] = useState(false);
 
   const showToast = (message: string) => {
     setToast(message);
     setTimeout(() => setToast(null), 1800);
   };
 
-  const handleInvite = (event: FormEvent<HTMLFormElement>) => {
+  const handleInvite = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    showToast("Manager invite sent successfully");
+
+    if (!isSupabaseConfigured) {
+      showToast("Supabase is not configured.");
+      return;
+    }
+
+    setIsSendingInvite(true);
+
+    const redirectUrl = `${window.location.origin}/admin/login?invite=1&role=${inviteRole}`;
+
+    const { error } = await supabase.auth.signInWithOtp({
+      email: inviteEmail.trim(),
+      options: {
+        emailRedirectTo: redirectUrl,
+        shouldCreateUser: true,
+      },
+    });
+
+    if (error) {
+      showToast(`Failed to send invite: ${error.message}`);
+      setIsSendingInvite(false);
+      return;
+    }
+
+    showToast("Invite request sent successfully");
     setInviteEmail("");
     setInviteRole("editor");
+    setIsSendingInvite(false);
   };
 
   const handlePasswordUpdate = (event: FormEvent<HTMLFormElement>) => {
@@ -76,9 +103,10 @@ export default function AdminSettingsPage() {
 
             <button
               type="submit"
+              disabled={isSendingInvite}
               className="inline-flex items-center rounded-xl bg-[#132640] px-5 py-3 text-sm font-semibold tracking-tight text-white transition hover:bg-[#0f1e34]"
             >
-              Send Invite
+              {isSendingInvite ? "Sending..." : "Send Invite"}
             </button>
           </form>
         </section>
