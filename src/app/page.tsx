@@ -111,22 +111,28 @@ export default function Home() {
                         high-pressure environments.
                       </p>
                       <div className="grid grid-cols-2 gap-3 pt-2 text-sm text-slate-100">
-                        <div className="rounded-xl border border-white/20 bg-[#081426]/45 p-3">
+                        <Link
+                          href="/why-us/upstream"
+                          className="rounded-xl border border-white/20 bg-[#081426]/45 p-3 transition hover:border-white/40 hover:bg-[#081426]/60"
+                        >
                           <p className="text-sm font-semibold tracking-[-0.03em]">
-                            Midstream
+                            Upstream
                           </p>
                           <p className="mt-1 text-xs uppercase tracking-[0.12em] text-slate-300">
                             explore
                           </p>
-                        </div>
-                        <div className="rounded-xl border border-white/20 bg-[#081426]/45 p-3">
+                        </Link>
+                        <Link
+                          href="/why-us/downstream"
+                          className="rounded-xl border border-white/20 bg-[#081426]/45 p-3 transition hover:border-white/40 hover:bg-[#081426]/60"
+                        >
                           <p className="text-sm font-semibold tracking-[-0.03em]">
                             Downstream
                           </p>
                           <p className="mt-1 text-xs uppercase tracking-[0.12em] text-slate-300">
                             learn more
                           </p>
-                        </div>
+                        </Link>
                       </div>
                     </article>
                   </AnimatedReveal>
