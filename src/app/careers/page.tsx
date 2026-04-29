@@ -16,7 +16,7 @@ export default function CareersPage() {
           <AnimatedReveal>
             <article>
               <h1 className="text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">
-                Careers at PetrolLink
+                Careers at Petrowave Energy Limited
               </h1>
               <p className="mt-5 text-base leading-7 tracking-[-0.01em] text-slate-200 sm:text-lg">
                 We hire curious professionals who thrive in technically
