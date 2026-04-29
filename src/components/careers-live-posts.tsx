@@ -57,7 +57,7 @@ export function CareersLivePosts({
         { event: "*", schema: "public", table: "career_posts" },
         () => {
           fetchRoles();
-        }
+        },
       )
       .subscribe();
 

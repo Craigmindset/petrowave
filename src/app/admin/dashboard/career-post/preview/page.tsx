@@ -90,7 +90,9 @@ export default function CareerPostPreviewPage() {
       ) : null}
 
       {isLoading ? (
-        <p className="mt-6 text-sm tracking-tight text-slate-600">Loading posts...</p>
+        <p className="mt-6 text-sm tracking-tight text-slate-600">
+          Loading posts...
+        </p>
       ) : null}
 
       {!isLoading && posts.length === 0 ? (
@@ -116,21 +118,31 @@ export default function CareerPostPreviewPage() {
                 <div className="min-w-0 flex-1">
                   <h3
                     className="text-base font-semibold tracking-tight text-[#132640] sm:text-lg"
-                    style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+                    style={{
+                      overflowWrap: "anywhere",
+                      wordBreak: "break-word",
+                    }}
                   >
                     {post.title}
                   </h3>
                   <p
                     className="mt-2 line-clamp-3 text-sm leading-6 tracking-tight text-slate-700"
-                    style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+                    style={{
+                      overflowWrap: "anywhere",
+                      wordBreak: "break-word",
+                    }}
                   >
                     {post.description}
                   </p>
                   <p
                     className="mt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-500 sm:text-xs sm:tracking-[0.12em]"
-                    style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+                    style={{
+                      overflowWrap: "anywhere",
+                      wordBreak: "break-word",
+                    }}
                   >
-                    Closing Date: {new Date(post.closing_date).toLocaleDateString()}
+                    Closing Date:{" "}
+                    {new Date(post.closing_date).toLocaleDateString()}
                   </p>
                 </div>
 

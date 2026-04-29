@@ -25,7 +25,7 @@ export function CareersPostsGrid({ roles }: { roles: CareerPost[] }) {
 
   const selectedRole = useMemo(
     () => roles.find((role) => role.id === selectedRoleId) ?? null,
-    [roles, selectedRoleId]
+    [roles, selectedRoleId],
   );
 
   useEffect(() => {
@@ -117,7 +117,8 @@ export function CareersPostsGrid({ roles }: { roles: CareerPost[] }) {
               </p>
 
               <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
-                Closing Date: {new Date(selectedRole.closing_date).toLocaleDateString()}
+                Closing Date:{" "}
+                {new Date(selectedRole.closing_date).toLocaleDateString()}
               </p>
             </div>
           </article>
