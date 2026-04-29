@@ -54,6 +54,9 @@ export async function POST(request: Request) {
     );
   }
 
+  const verifiedSupabaseUrl = supabaseUrl as string;
+  const verifiedSupabaseServiceRoleKey = supabaseServiceRoleKey as string;
+
   let rawPayload: Partial<QuoteRequestPayload>;
 
   try {
@@ -74,12 +77,16 @@ export async function POST(request: Request) {
     );
   }
 
-  const supabaseAdmin = createClient(supabaseUrl, supabaseServiceRoleKey, {
+  const supabaseAdmin = createClient(
+    verifiedSupabaseUrl,
+    verifiedSupabaseServiceRoleKey,
+    {
     auth: {
       autoRefreshToken: false,
       persistSession: false,
     },
-  });
+    },
+  );
 
   const { data, error } = await supabaseAdmin
     .from("quote_requests")
