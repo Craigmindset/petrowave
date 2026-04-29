@@ -38,7 +38,7 @@ function DesktopNav() {
               {group.label}
               <ChevronDown className="size-4 transition group-data-[state=open]:rotate-180" />
             </NavigationMenu.Trigger>
-            <NavigationMenu.Content className="absolute left-0 top-full mt-2 w-[300px]">
+            <NavigationMenu.Content className="absolute left-0 top-full mt-2 w-75">
               <motion.div
                 initial={{ opacity: 0, y: 10, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -156,7 +156,7 @@ function MobileNav() {
                             <ChevronDown className="size-4 transition group-data-[state=open]:rotate-180" />
                           </Accordion.Trigger>
                         </Accordion.Header>
-                        <Accordion.Content className="border-t border-white/10 bg-white/[0.02] px-2 py-2">
+                        <Accordion.Content className="border-t border-white/10 bg-white/2 px-2 py-2">
                           <ul className="space-y-1">
                             {group.items.map((item) => (
                               <li key={item.href}>
@@ -195,7 +195,7 @@ function MobileNav() {
                 </nav>
 
                 <Link
-                  href="/contact"
+                  href="/request-quote"
                   onClick={() => setOpen(false)}
                   className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-[#f47a30] px-4 py-3 text-sm font-semibold tracking-[-0.015em] text-white transition hover:bg-[#ff8a3d]"
                 >
@@ -231,7 +231,7 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Link
-            href="/contact"
+            href="/request-quote"
             className="inline-flex items-center rounded-full border border-[#f47a30] bg-[#f47a30] px-4 py-2 text-sm font-semibold tracking-[-0.015em] text-[#1a2434] transition hover:bg-[#ff8a3d]"
           >
             Request A Quote
@@ -243,4 +243,3 @@ export function SiteHeader() {
     </header>
   );
 }
-

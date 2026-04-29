@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { PartnershipRequestModal } from "@/components/partnership-request-modal";
@@ -9,16 +10,19 @@ const strategyCards = [
     title: "Procurement Partnership",
     description:
       "Collaborate on strategic sourcing frameworks, supplier quality controls, and contract execution that reduce cost leakage and strengthen reliability.",
+    image: "/petro-truck-distribute.jpg",
   },
   {
     title: "Distribution Partnership",
     description:
       "Build scalable downstream routes with shared planning, terminal coordination, and delivery assurance for resilient market reach.",
+    image: "/petrowave-drill-reporting.jpg",
   },
   {
     title: "Maintenance Partnership",
     description:
       "Co-develop preventive and corrective maintenance programs for critical assets to maximize uptime and improve long-term performance.",
+    image: "/petrowave-reporting.jpg",
   },
 ];
 
@@ -65,8 +69,13 @@ export function PartnershipContent() {
                 transition={{ type: "spring", stiffness: 300, damping: 22 }}
                 className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
               >
-                <div className="mb-4 flex aspect-4/3 w-full items-center justify-center rounded-xl border border-dashed border-slate-300 bg-slate-100 text-xs font-medium uppercase tracking-[0.12em] text-slate-500">
-                  Image Placeholder
+                <div className="relative mb-4 aspect-4/3 w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-semibold tracking-tight text-[#132640]">
                   {card.title}

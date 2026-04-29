@@ -53,13 +53,13 @@ export default function Home() {
 
               <div className="mt-10 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4">
                 <Link
-                  href="/contact"
+                  href="/request-quote"
                   className="inline-flex items-center justify-center rounded-full bg-[#f47a30] px-4 py-3 text-xs font-semibold tracking-[-0.015em] text-[#162235] transition hover:bg-[#ff8a3d] sm:px-6 sm:text-sm"
                 >
                   Request a Quote
                 </Link>
                 <Link
-                  href="/investors/investment-presentation"
+                  href="/investors/partnership"
                   className="inline-flex items-center justify-center rounded-full border border-white/35 px-4 py-3 text-xs font-semibold tracking-[-0.015em] text-white transition hover:bg-white/10 sm:px-6 sm:text-sm"
                 >
                   Become a Partner
@@ -168,4 +168,3 @@ export default function Home() {
     </main>
   );
 }
-

@@ -32,7 +32,7 @@ const partnerLinks = [
 const supportLinks = [
   { label: "Contact", href: "/contact" },
   { label: "Human Resources", href: "/why-us/human-resources" },
-  { label: "Quote Request", href: "/contact" },
+  { label: "Quote Request", href: "/request-quote" },
   { label: "Security", href: "/sustainability/esg-goals" },
 ];
 
@@ -227,4 +227,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-

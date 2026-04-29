@@ -63,7 +63,14 @@ const PETROWAVE_KNOWLEDGE_BASE: KnowledgeEntry[] = [
   {
     id: 3,
     question: "How can I invest?",
-    keywords: ["invest", "partner", "portfolio", "equity", "growth", "governance"],
+    keywords: [
+      "invest",
+      "partner",
+      "portfolio",
+      "equity",
+      "growth",
+      "governance",
+    ],
     answer:
       "We welcome strategic partnerships and investment. Please navigate to our 'Investors' section to view our Portfolio and Corporate Governance frameworks.",
   },
@@ -126,7 +133,11 @@ const STOP_WORDS = new Set([
 ]);
 
 function normalizeText(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function tokenize(value: string): string[] {
@@ -140,7 +151,9 @@ const SITE_SEARCH_DOCUMENTS: SearchDocument[] = [
     id: `kb-${entry.id}`,
     title: entry.question,
     body: `${entry.answer} ${entry.keywords.join(" ")}`,
-    tokens: tokenize(`${entry.question} ${entry.answer} ${entry.keywords.join(" ")}`),
+    tokens: tokenize(
+      `${entry.question} ${entry.answer} ${entry.keywords.join(" ")}`,
+    ),
   })),
   ...Object.entries(subPageContent).map(([href, content]) => {
     const title = content.title.replace(" | PetrolLink", "");
@@ -161,7 +174,7 @@ const SITE_SEARCH_DOCUMENTS: SearchDocument[] = [
       body: `${group.label} ${item.label}`,
       href: item.href,
       tokens: tokenize(`${group.label} ${item.label}`),
-    }))
+    })),
   ),
   ...topLevelLinks.map((link) => ({
     id: `top-${link.href}`,
@@ -177,7 +190,7 @@ function buildBotReply(input: string): ChatMessage {
   const queryTokens = tokenize(input);
 
   const match = PETROWAVE_KNOWLEDGE_BASE.find((entry) =>
-    entry.keywords.some((keyword) => normalizedInput.includes(keyword))
+    entry.keywords.some((keyword) => normalizedInput.includes(keyword)),
   );
 
   if (match) {
@@ -208,11 +221,17 @@ function buildBotReply(input: string): ChatMessage {
       }
     });
 
-    if (normalizedInput.length > 7 && normalizedBody.includes(normalizedInput)) {
+    if (
+      normalizedInput.length > 7 &&
+      normalizedBody.includes(normalizedInput)
+    ) {
       score += 5;
     }
 
-    if (normalizedInput.length > 7 && normalizedTitle.includes(normalizedInput)) {
+    if (
+      normalizedInput.length > 7 &&
+      normalizedTitle.includes(normalizedInput)
+    ) {
       score += 6;
     }
 
@@ -223,9 +242,10 @@ function buildBotReply(input: string): ChatMessage {
   const minimumScore = queryTokens.length >= 3 ? 3 : 2;
 
   if (best && best.score >= minimumScore) {
-    const shortAnswer = best.doc.body.length > 220
-      ? `${best.doc.body.slice(0, 220).trimEnd()}...`
-      : best.doc.body;
+    const shortAnswer =
+      best.doc.body.length > 220
+        ? `${best.doc.body.slice(0, 220).trimEnd()}...`
+        : best.doc.body;
 
     return {
       id: Date.now() + 1,
@@ -254,7 +274,7 @@ export function KnowledgeAssistant() {
 
   const hasUserInteraction = useMemo(
     () => messages.some((message) => message.role === "user"),
-    [messages]
+    [messages],
   );
 
   useEffect(() => {
@@ -304,7 +324,11 @@ export function KnowledgeAssistant() {
         transition={
           hasEverOpened
             ? { duration: 0.2 }
-            : { duration: 1.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }
+            : {
+                duration: 1.8,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+              }
         }
         className="fixed bottom-5 left-4 z-70 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#f47a30] text-white shadow-lg transition hover:bg-[#dc6d29] sm:bottom-6 sm:left-6"
       >
