@@ -15,7 +15,7 @@ const whyUsLinks = [
 const whoWeAreLinks = [
   { label: "We Started Well", href: "/who-we-are/we-started-well" },
   { label: "Oil & Gas Objective", href: "/who-we-are/oil-gas-objective" },
-  { label: "About PetrolLink", href: "/who-we-are/we-started-well" },
+  { label: "About Petrowave", href: "/who-we-are/we-started-well" },
   { label: "Careers", href: "/careers" },
 ];
 
@@ -26,7 +26,7 @@ const partnerLinks = [
     label: "Corporate Governance",
     href: "/investors/our-corporate-governance",
   },
-  { label: "Host a Hackathon", href: "/investors/partnership" },
+  { label: "Media Files", href: "/investors/media-files" },
 ];
 
 const supportLinks = [

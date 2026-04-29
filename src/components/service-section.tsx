@@ -36,12 +36,12 @@ const services: ServiceCard[] = [
     href: "/why-us/procurement",
   },
   {
-    title: "Downstream Efficiency",
+    title: "Human Resources",
     description:
-      "Operational improvement programs that strengthen refining and distribution performance while reducing waste and turnaround delays.",
-    image: "/petro-truck-distribute.jpg",
-    alt: "Petroleum truck distribution supporting downstream logistics",
-    href: "/why-us/downstream",
+      "Petrowave Energy Limited builds a skilled workforce through strategic recruitment, talent development, and strong human resource management that drives operational excellence and growth.",
+    image: "/Human-resources-petrowave.jpg",
+    alt: "Petrowave Energy human resources management",
+    href: "/why-us/human-resources",
   },
   {
     title: "Sustainability and ESG Advisory",
