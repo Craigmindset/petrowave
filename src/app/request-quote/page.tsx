@@ -32,7 +32,10 @@ export default function RequestQuotePage() {
   const router = useRouter();
   const [form, setForm] = useState<QuoteFormState>(initialForm);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showToast, setShowToast] = useState(false);
+  const [toast, setToast] = useState<{
+    message: string;
+    tone: "success" | "warning" | "error";
+  } | null>(null);
 
   const onChange = (
     event: React.ChangeEvent<
@@ -51,16 +54,46 @@ export default function RequestQuotePage() {
 
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 700));
+    try {
+      const response = await fetch("/api/request-quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    setShowToast(true);
-    setForm(initialForm);
+      const result = (await response.json()) as {
+        message?: string;
+        warning?: string;
+        error?: string;
+      };
 
-    setTimeout(() => {
-      router.push("/");
-    }, 1400);
+      if (!response.ok) {
+        setToast({
+          message: result.error ?? "Unable to submit quote request.",
+          tone: "error",
+        });
+        return;
+      }
 
-    setIsSubmitting(false);
+      setToast({
+        message: result.warning ?? result.message ?? "Quote submitted successfully.",
+        tone: result.warning ? "warning" : "success",
+      });
+      setForm(initialForm);
+
+      setTimeout(() => {
+        router.push("/");
+      }, 1400);
+    } catch {
+      setToast({
+        message: "Something went wrong while submitting your request.",
+        tone: "error",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -226,14 +259,20 @@ export default function RequestQuotePage() {
       </section>
 
       <AnimatePresence>
-        {showToast ? (
+        {toast ? (
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 12 }}
-            className="fixed bottom-6 left-1/2 z-60 -translate-x-1/2 rounded-xl bg-[#132640] px-5 py-3 text-sm font-semibold tracking-tight text-white shadow-xl"
+            className={`fixed bottom-6 left-1/2 z-60 -translate-x-1/2 rounded-xl px-5 py-3 text-sm font-semibold tracking-tight text-white shadow-xl ${
+              toast.tone === "error"
+                ? "bg-red-600"
+                : toast.tone === "warning"
+                  ? "bg-amber-500 text-slate-950"
+                  : "bg-[#132640]"
+            }`}
           >
-            Quote Submitted Successfully
+            {toast.message}
           </motion.div>
         ) : null}
       </AnimatePresence>
