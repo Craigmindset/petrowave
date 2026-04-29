@@ -47,18 +47,18 @@ export const navGroups: NavGroup[] = [
     label: "Investors",
     items: [
       { label: "Partnership", href: "/investors/partnership" },
-      {
-        label: "Investment Portfolio",
-        href: "/investors/investment-portfolio",
-      },
-      {
-        label: "Investment Presentation",
-        href: "/investors/investment-presentation",
-      },
-      {
-        label: "Our Corporate Governance",
-        href: "/investors/our-corporate-governance",
-      },
+      // {
+      //   label: "Investment Portfolio",
+      //   href: "/investors/investment-portfolio",
+      // },
+      // {
+      //   label: "Investment Presentation",
+      //   href: "/investors/investment-presentation",
+      // },
+      // {
+      //   label: "Our Corporate Governance",
+      //   href: "/investors/our-corporate-governance",
+      // },
     ],
   },
 ];
@@ -80,9 +80,9 @@ export const subPageContent: Record<string, SubPageContent> = {
       "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80",
   },
   "/who-we-are/oil-gas-objective": {
-    title: "Oil & Gas Objective | PetrolLink",
+    title: "Oil & Gas Objective | Petrowave Energy Limited",
     description:
-      "Explore PetrolLink's oil and gas objectives focused on resilience, efficiency, and long-term sustainability.",
+      "Explore Petrowave Energy Limited's oil and gas objectives focused on resilience, efficiency, and long-term sustainability.",
     heading: "Our objective in oil and gas",
     intro:
       "We align strategic sourcing, production support, and market intelligence to help clients improve output quality and commercial resilience. PetrolLink focuses on practical innovation that moves projects from intent to impact.",

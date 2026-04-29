@@ -21,11 +21,14 @@ const whoWeAreLinks = [
 
 const partnerLinks = [
   { label: "Partnership", href: "/investors/partnership" },
-  { label: "Investment Portfolio", href: "/investors/investment-portfolio" },
-  {
-    label: "Corporate Governance",
-    href: "/investors/our-corporate-governance",
-  },
+  // {
+  //   label: "Investment Portfolio",
+  //   href: "/investors/investment-portfolio",
+  // },
+  // {
+  //   label: "Corporate Governance",
+  //   href: "/investors/our-corporate-governance",
+  // },
   { label: "Media Files", href: "/investors/media-files" },
 ];
 
