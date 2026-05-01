@@ -23,8 +23,8 @@ function DesktopNav() {
             <Link
               href={link.href}
               className={cn(
-                "rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-white/90 transition hover:bg-white/10 hover:text-white",
-                pathname === link.href && "bg-white/10 text-white",
+                "rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640]",
+                pathname === link.href && "bg-slate-100 text-[#132640]",
               )}
             >
               {link.label}
@@ -34,7 +34,7 @@ function DesktopNav() {
 
         {navGroups.map((group) => (
           <NavigationMenu.Item key={group.label} className="relative">
-            <NavigationMenu.Trigger className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-white/90 transition hover:bg-white/10 hover:text-white data-[state=open]:bg-white/10 data-[state=open]:text-white">
+            <NavigationMenu.Trigger className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640] data-[state=open]:bg-slate-100 data-[state=open]:text-[#132640]">
               {group.label}
               <ChevronDown className="size-4 transition group-data-[state=open]:rotate-180" />
             </NavigationMenu.Trigger>
@@ -44,7 +44,7 @@ function DesktopNav() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 6, scale: 0.98 }}
                 transition={{ duration: 0.22, ease: "easeOut" }}
-                className="rounded-2xl border border-white/20 bg-[#0f1f35]/95 p-3 shadow-xl shadow-[#08101c]/30 backdrop-blur-xl"
+                className="rounded-2xl border border-slate-200 bg-white p-3 shadow-xl shadow-slate-300/30 backdrop-blur-xl"
               >
                 <ul className="space-y-1">
                   {group.items.map((item) => {
@@ -56,8 +56,8 @@ function DesktopNav() {
                           <Link
                             href={item.href}
                             className={cn(
-                              "block rounded-xl px-3 py-2 text-sm tracking-[-0.015em] text-slate-100 transition hover:bg-white/10",
-                              active && "bg-white/10 text-white",
+                              "block rounded-xl px-3 py-2 text-sm tracking-[-0.015em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640]",
+                              active && "bg-slate-100 text-[#132640]",
                             )}
                           >
                             {item.label}
@@ -77,8 +77,8 @@ function DesktopNav() {
             <Link
               href={link.href}
               className={cn(
-                "rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-white/90 transition hover:bg-white/10 hover:text-white",
-                pathname === link.href && "bg-white/10 text-white",
+                "rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640]",
+                pathname === link.href && "bg-slate-100 text-[#132640]",
               )}
             >
               {link.label}
@@ -96,7 +96,7 @@ function MobileNav() {
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 p-2 text-white backdrop-blur lg:hidden">
+      <Dialog.Trigger className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 text-[#132640] lg:hidden">
         <span className="sr-only">Toggle menu</span>
         <Menu className="size-5" />
       </Dialog.Trigger>
@@ -123,7 +123,7 @@ function MobileNav() {
               >
                 <div className="mb-6 flex items-center justify-between">
                   <span className="text-xs font-semibold tracking-[-0.02em] text-white">
-                    Petrowave Energy Limited
+                    PETROWAVE ENERGY LIMITED
                   </span>
                   <Dialog.Close className="rounded-full border border-white/20 p-2 text-white">
                     <X className="size-4" />
@@ -212,7 +212,7 @@ function MobileNav() {
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-30 border-b border-white/15 bg-[#071325]/65 backdrop-blur-xl">
+    <header className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur-xl">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="inline-flex items-center gap-2">
           <Image
@@ -222,8 +222,13 @@ export function SiteHeader() {
             height={32}
             className="h-8 w-8"
           />
-          <span className="text-sm font-semibold tracking-[-0.03em] text-white">
-            Petrowave Energy Limited
+          <span className="flex flex-col leading-none">
+            <span className="text-sm font-semibold uppercase tracking-[0.16em] text-[#132640]">
+              Petrowave
+            </span>
+            <span className="mt-1 text-[11px] font-medium tracking-[0.18em] text-slate-500">
+              Energy Limited
+            </span>
           </span>
         </Link>
 
