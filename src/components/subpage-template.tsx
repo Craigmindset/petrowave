@@ -84,7 +84,7 @@ export function SubPageTemplate({
                 Operational priorities
               </h2>
               <p className="mt-4 text-base leading-7 tracking-[-0.01em] text-slate-700">
-                PetrolLink combines engineering discipline, procurement
+                Petrolwave combines engineering discipline, procurement
                 reliability, and responsible governance to deliver sustainable
                 energy outcomes. Every project framework is designed to support
                 long-term performance and stakeholder confidence.
