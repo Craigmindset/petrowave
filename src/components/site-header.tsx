@@ -223,7 +223,7 @@ export function SiteHeader() {
             className="h-8 w-8"
           />
           <span className="flex flex-col leading-none">
-            <span className="text-sm font-semibold uppercase tracking-[0.16em] text-[#132640]">
+            <span className="text-sm font-extrabold uppercase tracking-[0.16em] text-[#132640]">
               Petrowave
             </span>
             <span className="mt-1 text-[11px] font-medium tracking-[0.18em] text-slate-500">
