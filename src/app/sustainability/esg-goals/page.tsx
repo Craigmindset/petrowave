@@ -33,18 +33,18 @@ const esgGallery = [
     title: "Community Health Outreach",
     image:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
-    category: "Social",
+    category: "Supply Chain",
   },
 
   {
     title: "Workforce Safety Briefing",
     image: "/Workforce.jpg",
-    category: "Social",
+    category: "Supply Chain",
   },
   {
     title: "Local Supplier Development",
     image: "/local supplier.jpg",
-    category: "Supply",
+    category: "Supply Chain",
   },
   {
     title: "Board-Level ESG Oversight",
@@ -110,7 +110,7 @@ export default function EsgGoalsPage() {
             {esgGallery.map((item) => (
               <article
                 key={item.title}
-                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md"
               >
                 <div className="relative aspect-4/3 overflow-hidden">
                   <img

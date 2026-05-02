@@ -13,9 +13,8 @@ const whyUsLinks = [
 ];
 
 const whoWeAreLinks = [
-  { label: "We Started Well", href: "/who-we-are/we-started-well" },
+  { label: "About Us", href: "/about-us" },
   { label: "Oil & Gas Objective", href: "/who-we-are/oil-gas-objective" },
-  { label: "About Petrowave", href: "/who-we-are/we-started-well" },
   { label: "Careers", href: "/careers" },
 ];
 

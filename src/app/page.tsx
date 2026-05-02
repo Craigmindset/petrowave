@@ -1,11 +1,30 @@
 ﻿"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AnimatedReveal } from "@/components/animated-reveal";
 import { IndustryCarousel } from "@/components/industry-carousel";
 import { ServiceSection } from "@/components/service-section";
+
+const clientLogos = [
+  { label: "Midwestern Oil", href: "#" },
+  { label: "Addax Petroleum Dev. Nig. Limited", href: "#" },
+  { label: "SEEPCO", href: "#" },
+  { label: "Neconde", href: "#" },
+  { label: "Daewoo NIG", href: "#" },
+  { label: "Geoplex", href: "#" },
+  { label: "Drillteq", href: "#" },
+];
+
+const strategicPartners = [
+  { label: "CS OILFIELD", src: "/client logos/cs-logo.svg" },
+  { label: "GOT", src: "/client logos/GOT.jfif" },
+  { label: "American Completions Tool", src: "/client logos/America.jfif" },
+  { label: "Botil", src: "/client logos/botil.webp" },
+  { label: "Neway Valves", src: "/client logos/newway.png" },
+];
 
 export default function Home() {
   const [isCardOpen, setIsCardOpen] = useState(true);
@@ -171,6 +190,108 @@ export default function Home() {
       <IndustryCarousel />
 
       <ServiceSection />
+
+      <section className="bg-white px-6 py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-7xl">
+          <AnimatedReveal>
+            <div className="mb-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#f47a30]">
+                Our Clients
+              </p>
+              <h2 className="mt-2 text-3xl font-semibold tracking-tight text-[#0b1a2e] sm:text-4xl">
+                OUR CLIENTS
+              </h2>
+            </div>
+          </AnimatedReveal>
+
+          <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div className="client-marquee flex items-center gap-6">
+              {[...clientLogos, ...clientLogos].map((client, index) => (
+                <a
+                  key={`${client.label}-${index}`}
+                  href={client.href}
+                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-slate-600 transition hover:border-[#f47a30] hover:text-[#f47a30]"
+                >
+                  {client.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-black px-6 py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-7xl">
+          <AnimatedReveal>
+            <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+              <article>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#ffb082]">
+                  Strategic Partnership
+                </p>
+                <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                  STRATEGIC PARTNERSHIP
+                </h2>
+                <p className="mt-4 text-sm leading-7 tracking-tight text-slate-200 sm:text-base">
+                  PETROWAVE Energy Limited is focused on delivering value-added
+                  services to her clients, hence, our focus includes developing
+                  strategic partnerships with innovative and technology driven
+                  companies in the area of our specialization, such as our
+                  partnership with CS OILFIELD, GOT, American Completions Tool,
+                  Botil, Neway Valves.
+                </p>
+                <Link
+                  href="/investors/partnership"
+                  className="mt-6 inline-flex items-center rounded-full bg-[#f47a30] px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-[#162235] transition hover:bg-[#ff8a3d] sm:text-sm"
+                >
+                  Learn More
+                </Link>
+              </article>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                {strategicPartners.map((partner) => (
+                  <div
+                    key={partner.label}
+                    className="flex items-center justify-center rounded-2xl border border-white/30 bg-white px-4 py-4 transition hover:border-white/60"
+                  >
+                    <span className="sr-only">{partner.label}</span>
+                    <div className="relative h-12 w-40">
+                      <Image
+                        src={partner.src}
+                        alt={partner.label}
+                        fill
+                        sizes="160px"
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimatedReveal>
+        </div>
+      </section>
+
+      <style jsx>{`
+        .client-marquee {
+          width: max-content;
+          animation: client-scroll 22s linear infinite;
+        }
+
+        @keyframes client-scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .client-marquee {
+            animation: none;
+          }
+        }
+      `}</style>
     </main>
   );
 }

@@ -32,45 +32,62 @@ function DesktopNav() {
           </li>
         ))}
 
-        {navGroups.map((group) => (
-          <NavigationMenu.Item key={group.label} className="relative">
-            <NavigationMenu.Trigger className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640] data-[state=open]:bg-slate-100 data-[state=open]:text-[#132640]">
-              {group.label}
-              <ChevronDown className="size-4 transition group-data-[state=open]:rotate-180" />
-            </NavigationMenu.Trigger>
-            <NavigationMenu.Content className="absolute left-0 top-full mt-2 w-75">
-              <motion.div
-                initial={{ opacity: 0, y: 10, scale: 0.98 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 6, scale: 0.98 }}
-                transition={{ duration: 0.22, ease: "easeOut" }}
-                className="rounded-2xl border border-slate-200 bg-white p-3 shadow-xl shadow-slate-300/30 backdrop-blur-xl"
-              >
-                <ul className="space-y-1">
-                  {group.items.map((item) => {
-                    const active = pathname === item.href;
+        {navGroups.map((group) => {
+          const isGridMenu =
+            group.label === "Our Services" || group.label === "Why us";
 
-                    return (
-                      <li key={item.href}>
-                        <NavigationMenu.Link asChild>
-                          <Link
-                            href={item.href}
-                            className={cn(
-                              "block rounded-xl px-3 py-2 text-sm tracking-[-0.015em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640]",
-                              active && "bg-slate-100 text-[#132640]",
-                            )}
-                          >
-                            {item.label}
-                          </Link>
-                        </NavigationMenu.Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </motion.div>
-            </NavigationMenu.Content>
-          </NavigationMenu.Item>
-        ))}
+          return (
+            <NavigationMenu.Item key={group.label} className="relative">
+              <NavigationMenu.Trigger className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640] data-[state=open]:bg-slate-100 data-[state=open]:text-[#132640]">
+                {group.label}
+                <ChevronDown className="size-4 transition group-data-[state=open]:rotate-180" />
+              </NavigationMenu.Trigger>
+              <NavigationMenu.Content
+                className={cn(
+                  "absolute top-full mt-2",
+                  isGridMenu
+                    ? "left-1/2 w-[720px] -translate-x-1/2"
+                    : "left-0 w-75",
+                )}
+              >
+                <motion.div
+                  initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 6, scale: 0.98 }}
+                  transition={{ duration: 0.22, ease: "easeOut" }}
+                  className="rounded-2xl border border-slate-200 bg-white p-3 shadow-xl shadow-slate-300/30 backdrop-blur-xl"
+                >
+                  <ul
+                    className={cn(
+                      "max-h-96 overflow-y-auto pr-1",
+                      isGridMenu ? "grid grid-cols-3 gap-2" : "space-y-1",
+                    )}
+                  >
+                    {group.items.map((item) => {
+                      const active = pathname === item.href;
+
+                      return (
+                        <li key={item.href}>
+                          <NavigationMenu.Link asChild>
+                            <Link
+                              href={item.href}
+                              className={cn(
+                                "block rounded-xl px-3 py-2 text-sm tracking-[-0.015em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640]",
+                                active && "bg-slate-100 text-[#132640]",
+                              )}
+                            >
+                              {item.label}
+                            </Link>
+                          </NavigationMenu.Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </motion.div>
+              </NavigationMenu.Content>
+            </NavigationMenu.Item>
+          );
+        })}
 
         {topLevelLinks.slice(1).map((link) => (
           <li key={link.href}>
@@ -157,7 +174,7 @@ function MobileNav() {
                           </Accordion.Trigger>
                         </Accordion.Header>
                         <Accordion.Content className="border-t border-white/10 bg-white/2 px-2 py-2">
-                          <ul className="space-y-1">
+                          <ul className="max-h-80 space-y-1 overflow-y-auto pr-1">
                             {group.items.map((item) => (
                               <li key={item.href}>
                                 <Link
@@ -216,7 +233,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="inline-flex items-center gap-2">
           <Image
-            src="/petrowave-logo.png"
+            src="/logo-petrowave.jpg"
             alt="Petrowave Energy Limited"
             width={32}
             height={32}

@@ -26,6 +26,14 @@ const strategyCards = [
   },
 ];
 
+const partnerLogos = [
+  { label: "CS OILFIELD", src: "/client logos/cs-logo.svg" },
+  { label: "GOT", src: "/client logos/GOT.jfif" },
+  { label: "American Completions Tool", src: "/client logos/America.jfif" },
+  { label: "Botil", src: "/client logos/botil.webp" },
+  { label: "Neway Valves", src: "/client logos/newway.png" },
+];
+
 export function PartnershipContent() {
   const [openModal, setOpenModal] = useState(false);
 
@@ -38,14 +46,40 @@ export function PartnershipContent() {
             Strategic Collaboration
           </p>
           <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Strategy Partnerships with Petrowave Energy Limited
+            Strategic Partnership
           </h1>
           <p className="mt-5 max-w-3xl text-base leading-7 tracking-tight text-slate-200 sm:text-lg">
-            We partner with forward-looking organizations to co-create value
-            across procurement, distribution, and maintenance. Our partnership
-            model is built on shared governance, measurable execution, and
-            long-term impact.
+            PETROWAVE Energy Limited is focused on delivering value-added
+            services to her clients, hence, our focus includes developing
+            strategic partnerships with innovative and technology driven
+            companies in the area of our specialization, such as our partnership
+            with CS OILFIELD, GOT, American Completions Tool, Botil, Neway
+            Valves.
           </p>
+        </div>
+      </section>
+
+      <section className="px-6 py-10 sm:py-12">
+        <div className="mx-auto w-full max-w-6xl">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {partnerLogos.map((partner) => (
+              <div
+                key={partner.label}
+                className="flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 py-4 transition hover:border-[#f47a30]"
+              >
+                <span className="sr-only">{partner.label}</span>
+                <div className="relative h-12 w-40">
+                  <Image
+                    src={partner.src}
+                    alt={partner.label}
+                    fill
+                    sizes="160px"
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

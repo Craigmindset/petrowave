@@ -94,7 +94,7 @@ export default function DownstreamPage() {
           </AnimatedReveal>
 
           <AnimatedReveal delay={0.1}>
-            <article className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm">
+            <article className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md">
               <div className="relative h-full  min-h-90 md:min-h-120 w-full">
                 <Image
                   src="/petrowave-fuel-pump.jpg"
@@ -111,7 +111,7 @@ export default function DownstreamPage() {
       <section className="bg-slate-50 px-6 py-16 sm:py-20">
         <div className="mx-auto grid w-full max-w-6xl gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-stretch">
           <AnimatedReveal>
-            <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md">
               <div className="relative h-full  min-h-90 md:min-h-120 w-full">
                 <Image
                   src="/petro-truck-distribute.jpg"
@@ -124,7 +124,7 @@ export default function DownstreamPage() {
           </AnimatedReveal>
 
           <AnimatedReveal delay={0.1}>
-            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md sm:p-8">
               <div className="flex items-center gap-2">
                 <CircleCheckBig className="h-15 w-15 text-[#f47a30]" />
                 <h3 className="text-sm font-semibold tracking-tight text-[#132640] sm:text-xl">
@@ -162,7 +162,7 @@ Our operations are structured to support bulk buyers, industrial clients, aviati
       <section className="bg-black px-6 py-16 text-center sm:py-20">
         <div className="mx-auto w-full max-w-6xl">
           <AnimatedReveal>
-            <article className="rounded-2xl border border-white/15 bg-white/2 p-8">
+            <article className="rounded-2xl border border-white/15 bg-white/2 p-8 transition duration-300 sm:hover:-translate-y-1 sm:hover:border-white/30 sm:hover:bg-white/5">
               <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-4xl">
                 Reliable energy delivery starts downstream
               </h2>

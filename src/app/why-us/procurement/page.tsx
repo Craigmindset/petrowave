@@ -47,7 +47,7 @@ export default function ProcurementPage() {
       <section className="bg-white px-6 py-16 sm:py-20">
         <div className="mx-auto grid w-full max-w-6xl items-stretch gap-8 lg:grid-cols-2">
           <AnimatedReveal>
-            <article className="h-full rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-8">
+            <article className="h-full rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md sm:p-8">
               <h2 className="text-2xl font-semibold tracking-tight text-[#132640] sm:text-3xl">
                 Procurement Services
               </h2>
@@ -76,7 +76,7 @@ Our procurement scope includes:`}
           </AnimatedReveal>
 
           <AnimatedReveal delay={0.1}>
-            <article className="h-full rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm sm:p-8">
+            <article className="h-full rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md sm:p-8">
               <h2 className="text-2xl font-semibold tracking-tight text-[#132640] sm:text-3xl">
                 Offshore Services
               </h2>
@@ -117,7 +117,7 @@ Key offshore capabilities include:`}
       <section className="bg-black px-6 py-16 text-center sm:py-20">
         <div className="mx-auto w-full max-w-4xl">
           <AnimatedReveal>
-            <article className="rounded-2xl border border-white/15 bg-white/2 p-8">
+            <article className="rounded-2xl border border-white/15 bg-white/2 p-8 transition duration-300 sm:hover:-translate-y-1 sm:hover:border-white/30 sm:hover:bg-white/5">
               <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                 Our Commitment
               </h2>

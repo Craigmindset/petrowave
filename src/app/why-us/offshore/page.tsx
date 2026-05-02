@@ -59,7 +59,7 @@ export default function OffshorePage() {
 
       <section className="px-6 py-16 sm:px-10 lg:px-16">
         <div className="mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[1.2fr_1fr]">
-          <article className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-9">
+          <article className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md sm:p-9">
             <h2 className="text-2xl font-semibold tracking-tight text-[#102440] sm:text-3xl">
               End-to-End Offshore Capability
             </h2>
@@ -73,7 +73,7 @@ export default function OffshorePage() {
               {coreCapabilities.map((item) => (
                 <article
                   key={item.title}
-                  className="rounded-2xl border border-slate-200 bg-slate-50 p-5"
+                  className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md"
                 >
                   <h3 className="text-base font-semibold tracking-tight text-[#132640]">
                     {item.title}
@@ -86,7 +86,7 @@ export default function OffshorePage() {
             </div>
           </article>
 
-          <aside className="rounded-3xl bg-[#132640] p-7 text-slate-100 shadow-sm sm:p-9">
+          <aside className="rounded-3xl bg-[#132640] p-7 text-slate-100 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:shadow-md sm:p-9">
             <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
               The PetroWave Advantage
             </h2>
@@ -99,7 +99,7 @@ export default function OffshorePage() {
               {valueHighlights.map((item) => (
                 <li
                   key={item}
-                  className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm leading-6"
+                  className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm leading-6 transition duration-300 sm:hover:border-white/30 sm:hover:bg-white/10"
                 >
                   {item}
                 </li>
@@ -110,7 +110,7 @@ export default function OffshorePage() {
       </section>
 
       <section className="px-6 pb-20 sm:px-10 lg:px-16">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-5 rounded-3xl border border-white/15 bg-black p-7 shadow-sm sm:flex-row sm:items-center sm:p-9">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-5 rounded-3xl border border-white/15 bg-black p-7 shadow-sm transition duration-300 sm:flex-row sm:items-center sm:hover:-translate-y-1 sm:hover:border-white/30 sm:hover:shadow-md sm:p-9">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight text-white">
               Ready to Strengthen Your Offshore Program?

@@ -21,26 +21,83 @@ export const navGroups: NavGroup[] = [
   {
     label: "Who we are",
     items: [
-      { label: "We started well", href: "/who-we-are/we-started-well" },
+      { label: "About Us", href: "/who-we-are/about-us" },
+      { label: "Our Team", href: "/who-we-are/our-team" },
       { label: "Oil & Gas Objective", href: "/who-we-are/oil-gas-objective" },
+      { label: "Careers", href: "/careers" },
+    ],
+  },
+  {
+    label: "Our Services",
+    items: [
+      { label: "Engineering Services", href: "/services/engineering-services" },
+      {
+        label: "Wellhead & Surface Equipment Services",
+        href: "/services/wellhead-surface-equipment-services",
+      },
+      {
+        label: "Well Completion & Production Services",
+        href: "/services/well-completion-production-services",
+      },
+      {
+        label: "Well Intervention & Workover",
+        href: "/services/well-intervention-workover",
+      },
+      {
+        label: "Zonal Isolation Services",
+        href: "/services/zonal-isolation-services",
+      },
+      {
+        label: "Oilfield Chemical Solutions",
+        href: "/services/oilfield-chemical-solutions",
+      },
+      {
+        label: "Construction & Installation (Onshore/Offshore)",
+        href: "/services/construction-installation-onshore-offshore",
+      },
+      {
+        label: "Mechanical & Fabrication Services",
+        href: "/services/mechanical-fabrication-services",
+      },
+      {
+        label: "Asset Integrity & Facility Maintenance",
+        href: "/services/asset-integrity-facility-maintenance",
+      },
+      {
+        label: "Electrical, Instrumentation & Control (EIC) Services",
+        href: "/services/electrical-instrumentation-control-eic-services",
+      },
+      {
+        label: "Advanced NDT & Corrosion Control",
+        href: "/services/advanced-ndt-corrosion-control",
+      },
+      {
+        label: "Inspection, Certification & Validation",
+        href: "/services/inspection-certification-validation",
+      },
+      {
+        label: "Manpower, Training & Consultancy",
+        href: "/services/manpower-training-consultancy",
+      },
+      {
+        label: "Procurement & Supply Chain Management",
+        href: "/services/procurement-supply-chain-management",
+      },
+      {
+        label: "Petroleum Products Supply",
+        href: "/services/petroleum-products-supply",
+      },
     ],
   },
   {
     label: "Why us",
     items: [
-      { label: "Procurement", href: "/why-us/procurement" },
-      { label: "Upstream", href: "/why-us/upstream" },
-      { label: "Downstream", href: "/why-us/downstream" },
-      { label: "Offshore", href: "/why-us/offshore" },
-      { label: "Human Resources", href: "/why-us/human-resources" },
-    ],
-  },
-  {
-    label: "Sustainability",
-    items: [
+      { label: "Sustainability", href: "/why-us/sustainability" },
       { label: "Environment", href: "/sustainability/environment" },
+      { label: "QHSE Policy", href: "/why-us/qhse-policy" },
+      { label: "ESG Goals", href: "/sustainability/esg-goals" },
+      { label: "Competitive Edge", href: "/why-us/competitive-edge" },
       { label: "Social Investment", href: "/sustainability/social-investment" },
-      { label: "ESG goals", href: "/sustainability/esg-goals" },
     ],
   },
   {
@@ -64,13 +121,13 @@ export const navGroups: NavGroup[] = [
 ];
 
 export const subPageContent: Record<string, SubPageContent> = {
-  "/who-we-are/we-started-well": {
-    title: "We Started Well | Petrowave Energy Limited",
+  "/about-us": {
+    title: "About Us | Petrowave Energy Limited",
     description:
       "Discover Petrowave Energy Limited's origin story, operational discipline, and commitment to energy excellence from day one.",
-    heading: "Who we are",
+    heading: "About us",
     intro:
-      "Petrowave Energy Limited is a proudly Nigerian oil and gas company headquartered in Port Harcourt, at the heart of one of Africa’s most vital energy hubs. We are committed to delivering reliable, efficient, and responsible energy solutions across the upstream, midstream, and downstream sectors",
+      "Petrowave Energy Limited is a proudly Nigerian oil and gas company headquartered in Port Harcourt, at the heart of one of Africa's most vital energy hubs. We are committed to delivering reliable, efficient, and responsible energy solutions across the upstream, midstream, and downstream sectors",
     highlights: [
       "Operational systems designed for traceability and speed.",
       "Leadership with deep regional and global project exposure.",
@@ -278,6 +335,5 @@ export const subPageContent: Record<string, SubPageContent> = {
 
 export const topLevelLinks = [
   { label: "Home", href: "/" },
-  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];

@@ -60,7 +60,7 @@ export default function EnvironmentPage() {
           {metrics.map((item) => (
             <article
               key={item.label}
-              className="rounded-2xl border border-emerald-100 bg-white p-6 shadow-sm"
+              className="rounded-2xl border border-emerald-100 bg-white p-6 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-emerald-200 sm:hover:shadow-md"
             >
               <p className="text-3xl font-semibold tracking-tight text-[#0b2c2b]">
                 {item.value}
@@ -82,7 +82,7 @@ export default function EnvironmentPage() {
             {pillars.map((pillar) => (
               <article
                 key={pillar.title}
-                className="rounded-2xl border border-slate-200 bg-slate-50 p-5"
+                className="rounded-2xl border border-slate-200 bg-slate-50 p-5 transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md"
               >
                 <h3 className="text-base font-semibold tracking-tight text-[#103836]">
                   {pillar.title}

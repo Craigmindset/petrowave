@@ -22,7 +22,7 @@ export default function OilGasObjectivePage() {
       <section className="bg-slate-50 px-6 py-16 sm:py-20">
         <div className="mx-auto grid w-full max-w-6xl gap-8 md:grid-cols-[0.95fr_1.05fr]">
           <AnimatedReveal>
-            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md">
               <h2 className="text-2xl font-semibold tracking-tight text-[#132640] sm:text-3xl">
                 Strategic Focus Areas
               </h2>
@@ -72,7 +72,7 @@ export default function OilGasObjectivePage() {
           </AnimatedReveal>
 
           <AnimatedReveal delay={0.08}>
-            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-slate-300 sm:hover:shadow-md sm:p-8">
               <h2 className="text-3xl font-semibold tracking-tight text-[#132640] sm:text-4xl">
                 We are building Industry goals
               </h2>
