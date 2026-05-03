@@ -30,62 +30,54 @@ export const navGroups: NavGroup[] = [
   {
     label: "Our Services",
     items: [
-      { label: "Engineering Services", href: "/services/engineering-services" },
+      { label: "Engineering Services", href: "/services#engineering-services" },
       {
-        label: "Wellhead & Surface Equipment Services",
-        href: "/services/wellhead-surface-equipment-services",
+        label: "Wellhead, Valve Maintenance & Well Intervention",
+        href: "/services#wellhead-valve-maintenance-well-intervention",
       },
       {
         label: "Well Completion & Production Services",
-        href: "/services/well-completion-production-services",
-      },
-      {
-        label: "Well Intervention & Workover",
-        href: "/services/well-intervention-workover",
-      },
-      {
-        label: "Zonal Isolation Services",
-        href: "/services/zonal-isolation-services",
-      },
-      {
-        label: "Oilfield Chemical Solutions",
-        href: "/services/oilfield-chemical-solutions",
+        href: "/services#well-completion-production-services",
       },
       {
         label: "Construction & Installation (Onshore/Offshore)",
-        href: "/services/construction-installation-onshore-offshore",
+        href: "/services#construction-installation-onshore-offshore",
       },
       {
-        label: "Mechanical & Fabrication Services",
-        href: "/services/mechanical-fabrication-services",
+        label: "Facility Maintenance & Inspection",
+        href: "/services#facility-maintenance-inspection",
       },
       {
-        label: "Asset Integrity & Facility Maintenance",
-        href: "/services/asset-integrity-facility-maintenance",
+        label: "Mechanical Construction & Fabrication",
+        href: "/services#mechanical-construction-fabrication",
+      },
+      {
+        label: "Marine Services & Rental Solutions",
+        href: "/services#marine-services-rental-solutions",
       },
       {
         label: "Electrical, Instrumentation & Control (EIC) Services",
-        href: "/services/electrical-instrumentation-control-eic-services",
+        href: "/services#electrical-instrumentation-control-eic-services",
       },
       {
-        label: "Advanced NDT & Corrosion Control",
-        href: "/services/advanced-ndt-corrosion-control",
+        label: "NDT, Corrosion Control & Inspection",
+        href: "/services#ndt-corrosion-control-inspection",
       },
       {
-        label: "Inspection, Certification & Validation",
-        href: "/services/inspection-certification-validation",
+        label: "Consultancy, Manpower & Training Services",
+        href: "/services#consultancy-manpower-training-services",
       },
       {
-        label: "Manpower, Training & Consultancy",
-        href: "/services/manpower-training-consultancy",
+        label: "Petroleum Products & Chemicals Supply",
+        href: "/services#petroleum-products-chemicals-supply",
       },
       {
         label: "Procurement & Supply Chain Management",
-        href: "/services/procurement-supply-chain-management",
+        href: "/services#procurement-supply-chain-management",
       },
       {
-        label: "Petroleum Products Supply",
-        href: "/services/petroleum-products-supply",
+        label: "General Contracts",
+        href: "/services#general-contracts",
       },
     ],
   },
@@ -335,5 +327,6 @@ export const subPageContent: Record<string, SubPageContent> = {
 
 export const topLevelLinks = [
   { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];
