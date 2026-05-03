@@ -30,6 +30,7 @@ export const navGroups: NavGroup[] = [
   {
     label: "Our Services",
     items: [
+      { label: "Service Portfolio", href: "/services" },
       { label: "Engineering Services", href: "/services#engineering-services" },
       {
         label: "Wellhead, Valve Maintenance & Well Intervention",
@@ -327,6 +328,5 @@ export const subPageContent: Record<string, SubPageContent> = {
 
 export const topLevelLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
 ];

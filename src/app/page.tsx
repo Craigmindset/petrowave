@@ -72,7 +72,7 @@ export default function Home() {
 
               <div className="mt-10 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center sm:gap-4">
                 <Link
-                  href="/request-quote"
+                  href="/services"
                   className="inline-flex items-center justify-center rounded-full bg-[#f47a30] px-4 py-3 text-xs font-semibold tracking-[-0.015em] text-[#162235] transition hover:bg-[#ff8a3d] sm:px-6 sm:text-sm"
                 >
                   Our Services

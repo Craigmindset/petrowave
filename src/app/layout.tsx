@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "PetrolLink is a modern energy sector partner delivering procurement, upstream, downstream, offshore, sustainability, and investor-ready execution.",
   icons: {
-    icon: "/petrowave-logo.png",
+    icon: "/logo-petrowave.jpg",
   },
 };
 
