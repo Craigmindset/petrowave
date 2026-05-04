@@ -90,7 +90,7 @@ export const navGroups: NavGroup[] = [
       { label: "QHSE Policy", href: "/why-us/qhse-policy" },
       { label: "ESG Goals", href: "/sustainability/esg-goals" },
       { label: "Competitive Edge", href: "/why-us/competitive-edge" },
-      { label: "Social Investment", href: "/sustainability/social-investment" },
+      // { label: "Social Investment", href: "/sustainability/social-investment" },
     ],
   },
   {

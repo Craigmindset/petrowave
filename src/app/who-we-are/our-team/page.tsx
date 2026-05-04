@@ -1,4 +1,12 @@
 import Image from "next/image";
+import {
+  Award,
+  Crown,
+  Flame,
+  RefreshCw,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 import { AnimatedReveal } from "@/components/animated-reveal";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -15,26 +23,32 @@ const teamPillars = [
   {
     title: "Experienced Leadership",
     body: "Seasoned professionals with deep expertise across energy operations, engineering, and project delivery.",
+    Icon: Crown,
   },
   {
     title: "Operational Discipline",
     body: "Teams aligned to safety, quality, and compliance standards that protect people, assets, and outcomes.",
+    Icon: ShieldCheck,
   },
   {
     title: "Collaborative Execution",
     body: "Cross-functional specialists working together to solve complex challenges and deliver measurable value.",
+    Icon: Users,
   },
   {
     title: "Local Insight, Global Standards",
     body: "Local market understanding supported by global best practices and industry benchmarks.",
+    Icon: Award,
   },
   {
     title: "Continuous Improvement",
     body: "A learning culture that strengthens performance, resilience, and customer confidence.",
+    Icon: RefreshCw,
   },
   {
     title: "Client-Centered Focus",
     body: "Every engagement is built around reliability, transparency, and long-term partnership.",
+    Icon: Flame,
   },
 ];
 
@@ -114,13 +128,18 @@ export default function OurTeamPage() {
 
           <div className="mt-10 h-px w-full bg-white/30" />
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid auto-rows-fr gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {teamPillars.map((pillar, index) => (
               <AnimatedReveal key={pillar.title} delay={index * 0.06}>
-                <article className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-white/25 sm:hover:bg-white/10 sm:hover:shadow-md">
-                  <h3 className="text-base font-semibold tracking-tight text-white">
-                    {pillar.title}
-                  </h3>
+                <article className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-5 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-[#f47a30] sm:hover:bg-white/10 sm:hover:shadow-md">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-[#f47a30]">
+                      <pillar.Icon className="h-5 w-5" />
+                    </span>
+                    <h3 className="text-base font-semibold tracking-tight text-white">
+                      {pillar.title}
+                    </h3>
+                  </div>
                   <p className="mt-3 text-sm leading-6 tracking-tight text-slate-200">
                     {pillar.body}
                   </p>

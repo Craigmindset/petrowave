@@ -13,7 +13,7 @@ const whyUsLinks = [
 ];
 
 const whoWeAreLinks = [
-  { label: "About Us", href: "/about-us" },
+  { label: "About Us", href: "/who-we-are/about-us" },
   { label: "Oil & Gas Objective", href: "/who-we-are/oil-gas-objective" },
   { label: "Careers", href: "/careers" },
 ];
@@ -28,7 +28,7 @@ const partnerLinks = [
   //   label: "Corporate Governance",
   //   href: "/investors/our-corporate-governance",
   // },
-  { label: "Media Files", href: "/investors/media-files" },
+  // { label: "Media Files", href: "/investors/media-files" },
 ];
 
 const supportLinks = [
