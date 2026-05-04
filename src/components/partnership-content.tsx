@@ -52,9 +52,7 @@ export function PartnershipContent() {
             PETROWAVE Energy Limited is focused on delivering value-added
             services to her clients, hence, our focus includes developing
             strategic partnerships with innovative and technology driven
-            companies in the area of our specialization, such as our partnership
-            with CS OILFIELD, GOT, American Completions Tool, Botil, Neway
-            Valves.
+            companies in the area of our specialization.
           </p>
         </div>
       </section>

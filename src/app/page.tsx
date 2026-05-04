@@ -9,19 +9,24 @@ import { IndustryCarousel } from "@/components/industry-carousel";
 import { ServiceSection } from "@/components/service-section";
 
 const clientLogos = [
-  { label: "Midwestern Oil", href: "#" },
-  { label: "Addax Petroleum Dev. Nig. Limited", href: "#" },
-  { label: "SEEPCO", href: "#" },
-  { label: "Neconde", href: "#" },
-  { label: "Daewoo NIG", href: "#" },
-  { label: "Geoplex", href: "#" },
-  { label: "Drillteq", href: "#" },
+  {
+    label: "Addax Petroleum",
+    src: "/client logos/Addax-Petroleum-LOGO.png",
+  },
+  {
+    label: "Midwestern Oil",
+    src: "/client logos/Midwestern-Logo1.png",
+  },
+  { label: "Neconde", src: "/client logos/neconde-logo.jpeg" },
+  { label: "Geoplex", src: "/client logos/Geoplex_logo_circle.png" },
+  { label: "SEEPCO", src: "/client logos/seepco.jpeg" },
+  { label: "Daewoo NIG", src: "/client logos/Daewoo Nig.jpeg" },
 ];
 
 const strategicPartners = [
   { label: "CS OILFIELD", src: "/client logos/cs-logo.svg" },
-  { label: "GOT", src: "/client logos/GOT.jfif" },
-  { label: "American Completions Tool", src: "/client logos/America.jfif" },
+  { label: "GOT", src: "/client logos/GOT.jpeg" },
+  { label: "American Completions Tool", src: "/client logos/America.jpeg" },
   { label: "Botil", src: "/client logos/botil.webp" },
   { label: "Neway Valves", src: "/client logos/newway.png" },
 ];
@@ -198,22 +203,27 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#f47a30]">
                 Our Clients
               </p>
-              <h2 className="mt-2 text-3xl font-semibold tracking-tight text-[#0b1a2e] sm:text-4xl">
-                OUR CLIENTS
-              </h2>
             </div>
           </AnimatedReveal>
 
           <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-6">
             <div className="client-marquee flex items-center gap-6">
               {[...clientLogos, ...clientLogos].map((client, index) => (
-                <a
+                <div
                   key={`${client.label}-${index}`}
-                  href={client.href}
-                  className="inline-flex shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-slate-600 transition hover:border-[#f47a30] hover:text-[#f47a30]"
+                  className="flex h-16 w-40 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2"
                 >
-                  {client.label}
-                </a>
+                  <span className="sr-only">{client.label}</span>
+                  <div className="relative h-10 w-28">
+                    <Image
+                      src={client.src}
+                      alt={client.label}
+                      fill
+                      sizes="112px"
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -235,9 +245,7 @@ export default function Home() {
                   PETROWAVE Energy Limited is focused on delivering value-added
                   services to her clients, hence, our focus includes developing
                   strategic partnerships with innovative and technology driven
-                  companies in the area of our specialization, such as our
-                  partnership with CS OILFIELD, GOT, American Completions Tool,
-                  Botil, Neway Valves.
+                  companies in the area of our specialization.
                 </p>
                 <Link
                   href="/investors/partnership"
