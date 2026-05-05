@@ -46,7 +46,7 @@ function DesktopNav() {
                 className={cn(
                   "absolute top-full mt-2",
                   isGridMenu
-                    ? "left-1/2 w-[720px] -translate-x-1/2"
+                    ? "left-1/2 w-180 -translate-x-1/2"
                     : "left-0 w-75",
                 )}
               >

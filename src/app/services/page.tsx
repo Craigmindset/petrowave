@@ -303,7 +303,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
-                  <div className="relative h-full min-h-[240px] w-full">
+                  <div className="relative h-full min-h-60 w-full">
                     <Image
                       src={service.image}
                       alt={service.title}

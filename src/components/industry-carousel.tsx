@@ -47,7 +47,7 @@ export function IndustryCarousel() {
       <div className="mx-auto w-full max-w-7xl overflow-hidden">
         <motion.div
           key={activeSlide}
-          className="mx-auto grid w-full max-w-[760px] grid-cols-6 items-center justify-items-center gap-3"
+          className="mx-auto grid w-full max-w-190 grid-cols-6 items-center justify-items-center gap-3"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, ease: "easeOut" }}

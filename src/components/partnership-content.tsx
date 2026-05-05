@@ -122,11 +122,11 @@ export function PartnershipContent() {
       </section>
 
       <section className="px-6 pb-16 sm:pb-20">
-        <div className="mx-auto w-full max-w-6xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-          <h2 className="text-2xl font-semibold tracking-tight text-[#132640] sm:text-3xl">
+        <div className="mx-auto w-full max-w-6xl rounded-2xl border border-white/10 bg-black p-6 shadow-sm sm:p-8">
+          <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
             Build a Partnership That Delivers Results
           </h2>
-          <p className="mt-3 max-w-3xl text-sm leading-6 tracking-tight text-slate-600 sm:text-base">
+          <p className="mt-3 max-w-3xl text-sm leading-6 tracking-tight text-white/80 sm:text-base">
             Submit a partnership request and our strategy team will schedule an
             evaluation session to align priorities, define scope, and identify
             execution milestones.

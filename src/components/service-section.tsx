@@ -150,7 +150,7 @@ export function ServiceSection() {
                 aria-label={service.title}
               >
                 <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm shadow-slate-900/5 transition hover:-translate-y-0.5 hover:shadow-md">
-                  <div className="relative mb-4 aspect-[4/3] w-full overflow-hidden rounded-xl">
+                  <div className="relative mb-4 aspect-4/3 w-full overflow-hidden rounded-xl">
                     <Image
                       src={service.image}
                       alt={service.alt}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Award,
   Crown,
@@ -147,6 +148,25 @@ export default function OurTeamPage() {
               </AnimatedReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-black px-6 pb-16 sm:pb-20">
+        <div className="mx-auto w-full max-w-4xl text-center">
+          <AnimatedReveal>
+            <article className="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <p className="text-sm leading-7 tracking-tight text-slate-200 sm:text-base">
+                Want to explore the strategic objectives guiding how we deliver
+                value across the oil and gas lifecycle?
+              </p>
+              <Link
+                href="/who-we-are/oil-gas-objective"
+                className="mt-5 inline-flex items-center rounded-xl bg-[#f47a30] px-5 py-3 text-sm font-semibold tracking-tight text-white transition hover:bg-[#ff8a3d]"
+              >
+                Explore Oil & Gas Objective
+              </Link>
+            </article>
+          </AnimatedReveal>
         </div>
       </section>
     </main>

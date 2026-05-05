@@ -23,7 +23,6 @@ const coreValues = [
   },
   {
     title: "Resilience",
-    body: "We remain focused and determined, overcoming challenges with strength, innovation, and a results-driven mindset.",
     Icon: Flame,
   },
   {
@@ -118,18 +117,26 @@ export default function AboutUsPage() {
                 every project.
               </p>
 
-              <Link
-                href="/who-we-are/oil-gas-objective"
-                className="mt-6 inline-flex items-center rounded-xl bg-[#f47a30] px-5 py-3 text-sm font-semibold tracking-tight text-white transition hover:bg-[#ff8a3d]"
-              >
-                Our Objectives
-              </Link>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Link
+                  href="/who-we-are/oil-gas-objective"
+                  className="inline-flex items-center rounded-xl bg-[#f47a30] px-5 py-3 text-sm font-semibold tracking-tight text-white transition hover:bg-[#ff8a3d]"
+                >
+                  Our Objectives
+                </Link>
+                <Link
+                  href="/who-we-are/our-team"
+                  className="inline-flex items-center rounded-xl border border-[#f47a30] px-5 py-3 text-sm font-semibold tracking-tight text-[#132640] transition hover:bg-[#f47a30] hover:text-white"
+                >
+                  Meet Our Team
+                </Link>
+              </div>
             </article>
           </AnimatedReveal>
 
           <AnimatedReveal delay={0.12}>
             <article className="overflow-hidden rounded-2xl">
-              <div className="relative h-full min-h-[500px] w-full">
+              <div className="relative h-full min-h-125 w-full">
                 <Image
                   src="/about.petrowave22.png"
                   alt="Petrowave professionals collaborating in the field"
@@ -142,11 +149,11 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 sm:py-20">
+      <section className="bg-black px-6 py-16 sm:py-20">
         <div className="mx-auto w-full max-w-6xl">
           <AnimatedReveal>
             <article className="max-w-4xl">
-              <p className="text-base leading-7 tracking-tight text-slate-700 sm:text-lg">
+              <p className="text-base leading-7 tracking-tight text-white sm:text-lg">
                 Through our commitment to excellence, innovation, and continuous
                 improvement, Petrowave Energy Limited has earned a solid
                 reputation and commendable track record within the Energy and
@@ -176,19 +183,19 @@ export default function AboutUsPage() {
             {[
               {
                 title: "Mission",
-                body: "Deliver dependable, safety-led energy solutions through disciplined execution, transparent governance, and strategic collaboration.",
+                body: "To redefine excellence in Oil & Gas by delivering innovative, sustainable, and value-driven solutions that empower our clients, advance industry standards, and build lasting partnerships rooted in trust and performance.",
                 hoverClass: "hover:bg-emerald-50 hover:border-emerald-200",
               },
               {
                 title: "Vision",
-                body: "Be the most trusted energy partner across procurement, operations, and sustainability by setting the benchmark for service excellence.",
+                body: "To be Africa's most trusted energy partner, shaping the future of Oil & Gas through uncompromising quality, cutting-edge innovation, and a relentless commitment to creating shared growth and global relevance.",
                 hoverClass: "hover:bg-rose-50 hover:border-rose-200",
               },
-              {
-                title: "Goals",
-                body: "Accelerate project performance, strengthen local and global partnerships, and drive measurable long-term value for stakeholders.",
-                hoverClass: "hover:bg-emerald-50 hover:border-emerald-200",
-              },
+              // {
+              //   title: "Goals",
+              //   body: "Accelerate project performance, strengthen local and global partnerships, and drive measurable long-term value for stakeholders.",
+              //   hoverClass: "hover:bg-emerald-50 hover:border-emerald-200",
+              // },
             ].map((item, index) => (
               <AnimatedReveal key={item.title} delay={index * 0.08}>
                 <article

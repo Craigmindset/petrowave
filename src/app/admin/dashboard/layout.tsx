@@ -76,10 +76,10 @@ export default function AdminDashboardLayout({
 
   return (
     <main className="min-h-screen bg-[#eef3f7]">
-      <div className="mx-auto grid min-h-screen w-full max-w-[1600px] lg:grid-cols-[auto_1fr]">
+      <div className="mx-auto grid min-h-screen w-full max-w-400 lg:grid-cols-[auto_1fr]">
         <aside
           className={`fixed inset-y-0 left-0 z-40 border-r border-slate-200 bg-white shadow-xl transition-transform duration-300 lg:sticky lg:top-0 lg:translate-x-0 lg:shadow-none ${
-            sidebarCollapsed ? "w-[92px]" : "w-[280px]"
+            sidebarCollapsed ? "w-23" : "w-70"
           } ${mobileNavOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
         >
           <div className="flex h-full flex-col p-4">
