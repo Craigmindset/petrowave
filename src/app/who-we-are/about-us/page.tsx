@@ -23,6 +23,7 @@ const coreValues = [
   },
   {
     title: "Resilience",
+    body: "We demonstrate resilience by overcoming challenges and continuously improving our processes and solutions.",
     Icon: Flame,
   },
   {
@@ -82,24 +83,24 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-16 sm:py-20">
+      <section className="bg-white px-6 py-16 sm:py-10">
         <div className="mx-auto grid w-full max-w-6xl gap-8 md:grid-cols-[0.95fr_1.05fr] md:items-stretch">
           <AnimatedReveal>
             <article>
               <h2 className="text-2xl font-semibold tracking-tight text-[#0b1a2e] sm:text-3xl">
                 About Us
               </h2>
-              <p className="mt-4 text-base leading-7 tracking-tight text-slate-700 text-justify">
-                Petrowave Energy Limited is a fast-growing indigenous company
-                committed to delivering quality, value-driven, and
-                cost-effective solutions to the Oil and Gas industry. With a
-                strong focus on innovation, safety, and sustainability, we
-                provide a comprehensive range of services across the upstream,
-                midstream, and downstream sectors, ensuring operational
-                excellence that consistently meets and exceeds the highest
-                industry standards. Our mission is to create long-term value for
-                our clients, partners, and stakeholders through efficient,
-                reliable, and forward-thinking energy solutions.
+              <p className="mt-4 text-base  leading-7 tracking-tight text-slate-700 text-justify">
+                <span className="font-bold"> Petrowave Energy Limited</span> is
+                a fast-growing indigenous company committed to delivering
+                quality, value-driven, and cost-effective solutions to the Oil
+                and Gas industry. With a strong focus on innovation, safety, and
+                sustainability, we provide a comprehensive range of services
+                across the upstream, midstream, and downstream sectors, ensuring
+                operational excellence that consistently meets and exceeds the
+                highest industry standards. Our mission is to create long-term
+                value for our clients, partners, and stakeholders through
+                efficient, reliable, and forward-thinking energy solutions.
               </p>
 
               <p className="mt-4 text-base leading-7 tracking-tight text-slate-700 text-justify">
@@ -149,8 +150,8 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="bg-black px-6 py-16 sm:py-20">
-        <div className="mx-auto w-full max-w-6xl">
+      <section className="bg-black px-6 py-16 sm:py-10">
+        <div className="mx-20 w-full max-w-6xl">
           <AnimatedReveal>
             <article className="max-w-4xl">
               <p className="text-base leading-7 tracking-tight text-white sm:text-lg">
@@ -163,7 +164,7 @@ export default function AboutUsPage() {
                 operational success while contributing to the sustainable growth
                 of the energy industry in Nigeria and beyond.
               </p>
-              <p className="mt-4 text-sm italic leading-7 tracking-tight text-slate-600 sm:text-base">
+              <p className="mt-4 text-sm italic leading-7 tracking-tight text-white/80 sm:text-base">
                 Responsibility is the baseline. Excellence is our standard.
               </p>
             </article>
@@ -171,15 +172,15 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-6 py-16 sm:py-20">
+      <section className="bg-slate-50 px-6 py-16 sm:py-10">
         <div className="mx-auto w-full max-w-6xl">
           <AnimatedReveal>
             <h2 className="text-3xl font-semibold tracking-tight text-[#132640] sm:text-4xl">
-              Mission, Vision and Goals
+              Mission and Vision
             </h2>
           </AnimatedReveal>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
             {[
               {
                 title: "Mission",

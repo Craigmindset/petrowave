@@ -6,6 +6,7 @@ type SubPageTemplateProps = {
   content: SubPageContent;
   useHeroBackground?: boolean;
   heroBackgroundImage?: string;
+  showOperationalPriorities?: boolean;
   children?: React.ReactNode;
 };
 
@@ -13,6 +14,7 @@ export function SubPageTemplate({
   content,
   useHeroBackground = false,
   heroBackgroundImage,
+  showOperationalPriorities = true,
   children,
 }: SubPageTemplateProps) {
   return (
@@ -76,42 +78,45 @@ export function SubPageTemplate({
 
       {children}
 
-      <section className="bg-white px-6 py-16 sm:py-20">
-        <div className="mx-auto grid w-full max-w-6xl gap-8 md:grid-cols-[0.95fr_1.05fr]">
-          <AnimatedReveal>
-            <article>
-              <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[#0b1a2e] sm:text-3xl">
-                Operational priorities
-              </h2>
-              <p className="mt-4 text-base leading-7 tracking-[-0.01em] text-slate-700">
-                Petrolwave combines engineering discipline, procurement
-                reliability, and responsible governance to deliver sustainable
-                energy outcomes. Every project framework is designed to support
-                long-term performance and stakeholder confidence.
-              </p>
-            </article>
-          </AnimatedReveal>
+      {showOperationalPriorities ? (
+        <section className="bg-white px-6 py-16 sm:py-20">
+          <div className="mx-auto grid w-full max-w-6xl gap-8 md:grid-cols-[0.95fr_1.05fr]">
+            <AnimatedReveal>
+              <article>
+                <h2 className="text-2xl font-semibold tracking-[-0.03em] text-[#0b1a2e] sm:text-3xl">
+                  Operational priorities
+                </h2>
+                <p className="mt-4 text-base leading-7 tracking-[-0.01em] text-slate-700">
+                  Petrolwave combines engineering discipline, procurement
+                  reliability, and responsible governance to deliver
+                  sustainable energy outcomes. Every project framework is
+                  designed to support long-term performance and stakeholder
+                  confidence.
+                </p>
+              </article>
+            </AnimatedReveal>
 
-          <AnimatedReveal delay={0.12}>
-            <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-              <h3 className="text-lg font-semibold tracking-[-0.02em] text-[#132640]">
-                Key focus areas
-              </h3>
-              <ul className="mt-4 space-y-3">
-                {content.highlights.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm leading-6 tracking-[-0.01em] text-slate-700 sm:text-base"
-                  >
-                    <span className="mt-2 inline-block size-2 rounded-full bg-[#f47a30]" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          </AnimatedReveal>
-        </div>
-      </section>
+            <AnimatedReveal delay={0.12}>
+              <article className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <h3 className="text-lg font-semibold tracking-[-0.02em] text-[#132640]">
+                  Key focus areas
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {content.highlights.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 text-sm leading-6 tracking-[-0.01em] text-slate-700 sm:text-base"
+                    >
+                      <span className="mt-2 inline-block size-2 rounded-full bg-[#f47a30]" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </AnimatedReveal>
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }

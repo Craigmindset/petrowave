@@ -53,6 +53,7 @@ export default function OilGasObjectivePage() {
       content={content}
       useHeroBackground
       heroBackgroundImage="/petrowave-drill-reporting.jpg"
+      showOperationalPriorities={false}
     >
       <section className="bg-slate-50 px-6 py-16 sm:py-20">
         <div className="mx-auto w-full max-w-6xl">

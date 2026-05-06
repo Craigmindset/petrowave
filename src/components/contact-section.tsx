@@ -25,12 +25,12 @@ const infoCards = [
   },
   {
     title: "Phone Number",
-    value: "+234 (0) 806 746 2711",
-    href: "tel:+2348067462711",
+    value: "+2349053970441",
+    href: "tel:+2349053970441",
     icon: Phone,
   },
   {
-    title: "Headquarter",
+    title: "Operating Office",
     value:
       " 13 Mission Avenue, Peter Odili, Trans Amadi Industrial Layout, Port Harcourt, Rivers State, Nigeria",
     href: undefined,

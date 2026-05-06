@@ -23,8 +23,8 @@ function DesktopNav() {
             <Link
               href={link.href}
               className={cn(
-                "rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640]",
-                pathname === link.href && "bg-slate-100 text-[#132640]",
+                "rounded-full px-3 py-2 text-base font-semibold tracking-[-0.02em] text-black transition hover:bg-slate-100 hover:text-black",
+                pathname === link.href && "bg-slate-100 text-black",
               )}
             >
               {link.label}
@@ -38,7 +38,7 @@ function DesktopNav() {
 
           return (
             <NavigationMenu.Item key={group.label} className="relative">
-              <NavigationMenu.Trigger className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640] data-[state=open]:bg-slate-100 data-[state=open]:text-[#132640]">
+              <NavigationMenu.Trigger className="group inline-flex items-center gap-1 rounded-full px-3 py-2 text-base font-semibold tracking-[-0.02em] text-black transition hover:bg-slate-100 hover:text-black data-[state=open]:bg-slate-100 data-[state=open]:text-black">
                 {group.label}
                 <ChevronDown className="size-4 transition group-data-[state=open]:rotate-180" />
               </NavigationMenu.Trigger>
@@ -94,8 +94,8 @@ function DesktopNav() {
             <Link
               href={link.href}
               className={cn(
-                "rounded-full px-3 py-2 text-sm font-medium tracking-[-0.02em] text-slate-700 transition hover:bg-slate-100 hover:text-[#132640]",
-                pathname === link.href && "bg-slate-100 text-[#132640]",
+                "rounded-full px-3 py-2 text-base font-semibold tracking-[-0.02em] text-black transition hover:bg-slate-100 hover:text-black",
+                pathname === link.href && "bg-slate-100 text-black",
               )}
             >
               {link.label}
@@ -240,7 +240,7 @@ export function SiteHeader() {
             className="h-8 w-8"
           />
           <span className="flex flex-col leading-none">
-            <span className="text-sm font-extrabold uppercase tracking-[0.16em] text-[#132640]">
+            <span className="text-sm font-extrabold uppercase tracking-[0.18em] text-[#000308]">
               Petrowave
             </span>
             <span className="mt-1 text-[11px] font-medium tracking-[0.18em] text-slate-500">

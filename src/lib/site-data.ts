@@ -24,6 +24,7 @@ export const navGroups: NavGroup[] = [
       { label: "About Us", href: "/who-we-are/about-us" },
       { label: "Our Team", href: "/who-we-are/our-team" },
       { label: "Oil & Gas Objective", href: "/who-we-are/oil-gas-objective" },
+      { label: "Partnership", href: "/investors/partnership" },
       { label: "Careers", href: "/careers" },
     ],
   },
@@ -87,30 +88,17 @@ export const navGroups: NavGroup[] = [
     items: [
       { label: "Sustainability", href: "/why-us/sustainability" },
       { label: "Environment", href: "/sustainability/environment" },
-      { label: "QHSE Policy", href: "/why-us/qhse-policy" },
       { label: "ESG Goals", href: "/sustainability/esg-goals" },
       { label: "Competitive Edge", href: "/why-us/competitive-edge" },
       // { label: "Social Investment", href: "/sustainability/social-investment" },
     ],
   },
-  {
-    label: "Investors",
-    items: [
-      { label: "Partnership", href: "/investors/partnership" },
-      // {
-      //   label: "Investment Portfolio",
-      //   href: "/investors/investment-portfolio",
-      // },
-      // {
-      //   label: "Investment Presentation",
-      //   href: "/investors/investment-presentation",
-      // },
-      // {
-      //   label: "Our Corporate Governance",
-      //   href: "/investors/our-corporate-governance",
-      // },
-    ],
-  },
+  // {
+  //   label: "HSE Safety",
+  //   items: [
+  //     { label: "HSE Safety Policy", href: "/hse-safety" },
+  //   ],
+  // },
 ];
 
 export const subPageContent: Record<string, SubPageContent> = {
@@ -135,7 +123,7 @@ export const subPageContent: Record<string, SubPageContent> = {
       "Explore Petrowave Energy Limited's oil and gas objectives focused on resilience, efficiency, and long-term sustainability.",
     heading: "Our objective in oil and gas",
     intro:
-      "We align strategic sourcing, production support, and market intelligence to help clients improve output quality and commercial resilience. PetrolLink focuses on practical innovation that moves projects from intent to impact.",
+      "We align strategic sourcing, production support, and market intelligence to help clients improve output quality and commercial resilience. Petrowave Energy Limited focuses on practical innovation that moves projects from intent to impact.",
     highlights: [
       "Performance goals tied to production continuity.",
       "Commercial intelligence for smarter energy decisions.",
@@ -328,5 +316,6 @@ export const subPageContent: Record<string, SubPageContent> = {
 
 export const topLevelLinks = [
   { label: "Home", href: "/" },
+  { label: "HSE Safety", href: "/hse-safety" },
   { label: "Contact", href: "/contact" },
 ];
