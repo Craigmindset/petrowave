@@ -261,7 +261,7 @@ export default function Home() {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#ffb082]">
                   Strategic Partnership
                 </p>
-                <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-3xl">
                   STRATEGIC PARTNERSHIP
                 </h2>
                 <p className="mt-4 text-sm leading-7 tracking-tight text-slate-200 sm:text-base">
@@ -310,7 +310,7 @@ export default function Home() {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#f47a30]">
                   QHSE Commitment
                 </p>
-                <h2 className="mt-2 text-3xl font-semibold tracking-tight text-[#132640] sm:text-4xl">
+                <h2 className="mt-2 text-3xl font-semibold tracking-tight text-[#132640] sm:text-3xl">
                   Quality, Health, Safety & Environment (QHSE)
                 </h2>
                 <p className="mt-4 text-sm leading-7 tracking-tight text-slate-700 sm:text-base">
