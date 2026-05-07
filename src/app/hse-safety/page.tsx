@@ -1,11 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   AlertTriangle,
-  BadgeCheck,
-  HeartPulse,
+  BarChart3,
+  CheckCircle2,
+  ClipboardCheck,
+  FileBadge,
   Leaf,
+  Recycle,
   ShieldCheck,
-  TrendingUp,
+  Target,
+  Users,
 } from "lucide-react";
 import { AnimatedReveal } from "@/components/animated-reveal";
 import { buildMetadata } from "@/lib/metadata";
@@ -19,36 +24,61 @@ export const metadata = buildMetadata({
   pathname,
 });
 
-const policyPillars = [
+const managementCommitments = [
   {
-    title: "Quality Assurance",
-    body: "Deliver services that meet or exceed client requirements through rigorous planning, compliance, and continuous improvement.",
-    Icon: BadgeCheck,
-  },
-  {
-    title: "Health & Safety",
-    body: "Protect people and assets with proactive risk management, safe work practices, and a culture of accountability.",
-    Icon: HeartPulse,
-  },
-  {
-    title: "Environmental Stewardship",
-    body: "Minimize environmental impact by managing resources responsibly, reducing waste, and preventing incidents.",
-    Icon: Leaf,
-  },
-  {
-    title: "Regulatory Compliance",
-    body: "Align operations with applicable laws, industry standards, and ethical business practices across all projects.",
+    text: "Providing safe and healthy working environments to prevent work-related injuries, illnesses, and incidents.",
     Icon: ShieldCheck,
   },
   {
-    title: "Incident Prevention",
-    body: "Identify and mitigate hazards early through inspections, training, and performance monitoring.",
+    text: "Identifying, eliminating, and controlling hazards and occupational risks to as low as reasonably practicable levels.",
     Icon: AlertTriangle,
   },
   {
-    title: "Continuous Improvement",
-    body: "Measure performance, capture lessons learned, and strengthen controls to elevate QHSE outcomes.",
-    Icon: TrendingUp,
+    text: "Protecting the environment through pollution prevention, sustainable resource management, and responsible waste disposal.",
+    Icon: Leaf,
+  },
+  {
+    text: "Ensuring compliance with all relevant statutory, regulatory, and industry requirements as well as client-specific QHSE standards.",
+    Icon: FileBadge,
+  },
+  {
+    text: "Delivering products and services that consistently meet or exceed customer expectations and contractual obligations.",
+    Icon: CheckCircle2,
+  },
+  {
+    text: "Continuously improving the effectiveness of our Integrated QHSE Management System through regular monitoring, audits, and reviews.",
+    Icon: BarChart3,
+  },
+  {
+    text: "Promoting a culture of consultation, communication, and active participation among all employees and stakeholders on QHSE matters.",
+    Icon: Users,
+  },
+];
+
+const alignmentCommitments = [
+  {
+    text: "QHSE considerations are embedded in every stage of our planning, execution, and decision-making processes.",
+    Icon: ClipboardCheck,
+  },
+  {
+    text: "All employees are trained, competent, and empowered to carry out their duties safely and responsibly.",
+    Icon: ShieldCheck,
+  },
+  {
+    text: "Waste and emissions are minimized through reduction, reuse, recycling, and controlled disposal practices.",
+    Icon: Recycle,
+  },
+  {
+    text: "Hazardous materials are properly handled, stored, and disposed of in line with regulatory and industry best practices.",
+    Icon: AlertTriangle,
+  },
+  {
+    text: "The company’s operations are aligned with international QHSE standards - ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018.",
+    Icon: FileBadge,
+  },
+  {
+    text: "Clear QHSE objectives and measurable performance targets are established, monitored, and reviewed regularly to drive continual improvement.",
+    Icon: Target,
   },
 ];
 
@@ -69,20 +99,38 @@ export default function HseSafetyPage() {
 
         <div className="mx-auto w-full max-w-6xl">
           <AnimatedReveal>
-            <article className="max-w-3xl">
-              <div className="flex items-center gap-2 text-white">
-                <ShieldCheck className="h-5 w-5" />
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
-                  HSE Safety
-                </p>
-              </div>
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
-                HSE Safety Policy
+            <article className="mx-auto max-w-6xl">
+              <h1 className="mt-3 text-3xl font-semibold tracking-tight sm:text-3xl">
+                QUALITY, HEALTH, SAFETY & ENVIRONMENTAL (QHSE) POLICY
               </h1>
-              <p className="mt-5 text-base leading-7 tracking-tight text-slate-200 sm:text-lg">
-                Our Quality, Health, Safety, and Environment policy <br />
-                guides every decision to protect people, assets, and the
-                environment.
+            </article>
+          </AnimatedReveal>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl">
+          <AnimatedReveal>
+            <article className="mx-auto max-w-5xl lg:text-center">
+              <h2 className="text-2xl font-semibold tracking-tight text-[#132640] sm:text-3xl">
+                QHSE
+              </h2>
+              <p className="mt-4 text-sm leading-7 tracking-tight text-slate-700 sm:text-base">
+                At Petrowave Energy Limited, our mission is to deliver superior
+                services while maintaining the highest standards of Quality,
+                Health, Safety, and Environmental (QHSE) performance across all
+                our operations. We are deeply committed to ensuring that every
+                activity from engineering, project management, procurement,
+                construction/fabrication, installation, commissioning, and
+                maintenance is executed responsibly, safely, and sustainably
+                within the Energy, Oil & Gas industries.
+              </p>
+              <p className="mt-4 text-sm leading-7 tracking-tight text-slate-700 sm:text-base">
+                We believe that the well-being of our people, clients, partners,
+                and the protection of our environment are core to our business
+                success. Our goal is to achieve zero harm to people, assets, and
+                the environment through proactive risk management, strong
+                leadership commitment, and a culture of continuous improvement.
               </p>
             </article>
           </AnimatedReveal>
@@ -92,38 +140,103 @@ export default function HseSafetyPage() {
       <section className="bg-black px-6 py-16 sm:py-20">
         <div className="mx-auto w-full max-w-6xl">
           <AnimatedReveal>
-            <article className="max-w-3xl">
+            <div>
               <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                Our commitments
+                Petrowave Energy Limited’s Management is fully committed to:
               </h2>
-              <p className="mt-4 text-base leading-7 tracking-tight text-slate-200">
-                Petrowave Energy Limited is committed to delivering services
-                responsibly, safely, and with uncompromising quality. Our QHSE
-                framework is embedded in daily operations, from planning and
-                procurement to execution and closeout.
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {managementCommitments.map((item, index) => (
+                  <AnimatedReveal
+                    key={item.text}
+                    delay={index * 0.04}
+                    offsetX="var(--reveal-x)"
+                    offsetY={0}
+                    className={
+                      index % 2 === 0
+                        ? "[--reveal-x:-24px] sm:[--reveal-x:0px]"
+                        : "[--reveal-x:24px] sm:[--reveal-x:0px]"
+                    }
+                  >
+                    <article className="group flex h-full gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 transition duration-300 sm:hover:-translate-y-1 sm:hover:border-[#f47a30] sm:hover:bg-white/10">
+                      <span className="mt-1 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white transition group-hover:border-[#f47a30] group-hover:text-[#f47a30]">
+                        <item.Icon className="h-5 w-5" />
+                      </span>
+                      <p className="text-sm leading-6 tracking-tight text-slate-200 sm:text-base">
+                        {item.text}
+                      </p>
+                    </article>
+                  </AnimatedReveal>
+                ))}
+              </div>
+            </div>
+          </AnimatedReveal>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 px-6 py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-6xl">
+          <AnimatedReveal>
+            <article>
+              <p className="text-sm leading-6 tracking-tight text-slate-700">
+                In alignment with these commitments,
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold tracking-tight text-[#132640]">
+                Petrowave Energy Limited
+              </h3>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {alignmentCommitments.map((item, index) => (
+                  <AnimatedReveal
+                    key={item.text}
+                    delay={index * 0.04}
+                    offsetX="var(--reveal-x)"
+                    offsetY={0}
+                    className={
+                      index % 2 === 0
+                        ? "[--reveal-x:-24px] sm:[--reveal-x:0px]"
+                        : "[--reveal-x:24px] sm:[--reveal-x:0px]"
+                    }
+                  >
+                    <article className="flex h-full gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-[#f47a30]">
+                      <span className="mt-1 flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-[#132640]">
+                        <item.Icon className="h-5 w-5" />
+                      </span>
+                      <p className="text-sm leading-6 tracking-tight text-slate-700 sm:text-base">
+                        {item.text}
+                      </p>
+                    </article>
+                  </AnimatedReveal>
+                ))}
+              </div>
+              <p className="mt-5 text-sm leading-7 tracking-tight text-slate-700 sm:text-base">
+                Through these principles, Petrowave Energy Limited reaffirms its
+                unwavering commitment to operational excellence, safety
+                leadership, and environmental stewardship ensuring sustainable
+                growth and long-term value for all stakeholders.
               </p>
             </article>
           </AnimatedReveal>
+        </div>
+      </section>
 
-          <div className="mt-8 grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {policyPillars.map((pillar, index) => (
-              <AnimatedReveal key={pillar.title} delay={index * 0.06}>
-                <article className="group flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-5 shadow-sm transition duration-300 sm:hover:-translate-y-1 sm:hover:border-[#f47a30] sm:hover:bg-white/10 sm:hover:shadow-md">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white">
-                      <pillar.Icon className="h-5 w-5" />
-                    </span>
-                    <h3 className="text-base font-semibold tracking-tight text-white transition-colors sm:group-hover:text-[#f47a30]">
-                      {pillar.title}
-                    </h3>
-                  </div>
-                  <p className="mt-3 text-sm leading-6 tracking-tight text-slate-200">
-                    {pillar.body}
-                  </p>
-                </article>
-              </AnimatedReveal>
-            ))}
-          </div>
+      <section className="bg-white px-6 pb-16 sm:pb-20">
+        <div className="mx-auto w-full max-w-6xl">
+          <AnimatedReveal>
+            <article className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+              <h2 className="text-2xl font-semibold tracking-tight text-[#132640] sm:text-3xl">
+                Learn more about Petrowave Energy Limited
+              </h2>
+              <p className="mt-3 text-sm leading-7 tracking-tight text-slate-700 sm:text-base">
+                Discover our story, leadership, and the values that guide our
+                operations.
+              </p>
+              <Link
+                href="/who-we-are/about-us"
+                className="mt-6 inline-flex items-center rounded-full bg-[#f47a30] px-6 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-[#162235] transition hover:bg-[#ff8a3d] sm:text-sm"
+              >
+                About Us
+              </Link>
+            </article>
+          </AnimatedReveal>
         </div>
       </section>
     </main>
