@@ -14,12 +14,28 @@ const clientLogos = [
     src: "/client logos/Addax-Petroleum-LOGO.png",
   },
   {
-    label: "Midwestern Oil",
-    src: "/client logos/Midwestern-Logo1.png",
+    label: "NLNG",
+    src: "/client logos/Behind-The-Unveiling-Of-New-NLNG-Logo.jpg.jpeg",
   },
+  { label: "Greenville", src: "/client logos/Greenville logo.webp" },
+  { label: "Heritage", src: "/client logos/Heritage logo.webp" },
+  {
+    label: "Midwestern Oil",
+    src: "/client logos/midwestern logo.webp",
+  },
+  { label: "Oando", src: "/client logos/Oando logo.webp" },
+  {
+    label: "Renaissance Africa Energy",
+    src: "/client logos/RENAISSANCE-AFRICA-ENERGY-LOGO-update.webp",
+  },
+  { label: "SEEPCO", src: "/client logos/SEEPCO logo.webp" },
+  {
+    label: "TotalEnergies",
+    src: "/client logos/total-energies-logo-transparent-png-701751694714035bjuuffwgkn.png",
+  },
+  { label: "Aradel", src: "/client logos/aradel logo.webp" },
   { label: "Neconde", src: "/client logos/neconde-logo.jpeg" },
   { label: "Geoplex", src: "/client logos/Geoplex_logo_circle.png" },
-  { label: "SEEPCO", src: "/client logos/seepco.jpeg" },
   { label: "Daewoo NIG", src: "/client logos/Daewoo Nig.jpeg" },
 ];
 
@@ -206,20 +222,20 @@ export default function Home() {
             </div>
           </AnimatedReveal>
 
-          <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-6">
-            <div className="client-marquee flex items-center gap-6">
-              {[...clientLogos, ...clientLogos].map((client, index) => (
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+              {clientLogos.slice(0, 12).map((client) => (
                 <div
-                  key={`${client.label}-${index}`}
-                  className="flex h-16 w-40 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white px-4 py-2"
+                  key={client.label}
+                  className="flex h-24 items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 py-3"
                 >
                   <span className="sr-only">{client.label}</span>
-                  <div className="relative h-10 w-28">
+                  <div className="relative h-16 w-32 sm:h-16 sm:w-36 lg:h-20 lg:w-40">
                     <Image
                       src={client.src}
                       alt={client.label}
                       fill
-                      sizes="112px"
+                      sizes="(min-width: 1024px) 160px, (min-width: 640px) 144px, 128px"
                       className="object-contain"
                     />
                   </div>
@@ -279,27 +295,6 @@ export default function Home() {
         </div>
       </section>
 
-      <style jsx>{`
-        .client-marquee {
-          width: max-content;
-          animation: client-scroll 22s linear infinite;
-        }
-
-        @keyframes client-scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .client-marquee {
-            animation: none;
-          }
-        }
-      `}</style>
     </main>
   );
 }
