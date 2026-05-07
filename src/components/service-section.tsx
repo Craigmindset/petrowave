@@ -12,107 +12,84 @@ type ServiceCard = {
 
 const services: ServiceCard[] = [
   {
+    title: "Wellhead / Valves / Christmas Tree / CCUS",
+    description:
+      "Supply, inspection, installation, and maintenance for wellhead systems and CCUs.",
+    image: "/WELLHEAD%2C%20VALVE%20MAINTENANCE%20%26%20WELL%20INTERVENTION.jpg",
+    alt: "Wellhead and valve services",
+    href: "/services#wellhead-valves-christmas-tree-ccus",
+  },
+  {
+    title: "Well Completions & Production Services",
+    description:
+      "Completion design, installation, and production optimization services.",
+    image: "/petrowave-drill-reporting.jpg",
+    alt: "Well completions and production services",
+    href: "/services#well-completions-production-services",
+  },
+  {
+    title: "Well Intervention and Workover Services",
+    description:
+      "Interventions and workovers to restore or improve well productivity.",
+    image: "/petrowave-vaule-sealing.jpg",
+    alt: "Well intervention and workover services",
+    href: "/services#well-intervention-workover-services",
+  },
+  {
+    title: "Zonal Isolation with Bridge Plugs & RTTS Packers",
+    description:
+      "Isolation solutions for zonal control, testing, and remediation.",
+    image: "/MECHANICAL%20CONSTRUCTION%20%26%20FABRICATION.jpg",
+    alt: "Zonal isolation tools and services",
+    href: "/services#zonal-isolation-bridge-plugs-cement-retainers-rtts-packers",
+  },
+  {
+    title: "Oilfield Chemicals",
+    description:
+      "Drilling, completion, production, and specialty chemical solutions.",
+    image: "/petro-truck-distribute.jpg",
+    alt: "Oilfield chemicals and fluids",
+    href: "/services#oilfield-chemicals",
+  },
+  {
+    title: "Onshore / Offshore Mechanical, Fabrication & Construction",
+    description:
+      "Full-scale mechanical fabrication, construction, and installation.",
+    image: "/ONSHOREOFFSHORE%20CONSTRUCTION%20%26%20INSTALLATION.jpg",
+    alt: "Onshore and offshore mechanical construction",
+    href: "/services#onshore-offshore-mechanical-fabrication-construction-installation",
+  },
+  {
+    title: "Advanced NDT & Corrosion Control",
+    description:
+      "Integrity assurance, inspection, and corrosion control programs.",
+    image: "/NDT%2C%20CORROSION%20CONTROL%20%26%20INSPECTION.jpg",
+    alt: "Advanced NDT and corrosion control",
+    href: "/services#ndt-corrosion-control-inspection-maintenance",
+  },
+  {
+    title: "Manpower Solutions, Consultancy & Trainings",
+    description:
+      "Skilled manpower, advisory services, and compliance training programs.",
+    image: "/CONSULTANCY%2C%20MANPOWER%20%26%20TRAINING%20SERVICES.jpg",
+    alt: "Manpower and consultancy services",
+    href: "/services#manpower-consultancy-trainings",
+  },
+  {
     title: "Engineering Services",
     description:
-      "World-class engineering solutions spanning concept, design, execution, and commissioning.",
+      "End-to-end engineering across concept, FEED, and detailed design.",
     image: "/ENGINEERING%20SERVICES.jpg",
-    alt: "Engineering planning and field reporting",
+    alt: "Engineering services",
     href: "/services#engineering-services",
   },
   {
-    title: "Wellhead, Valve Maintenance & Well Intervention",
+    title: "Project Procurement & Supply Chain Management",
     description:
-      "Specialized wellhead, valve, and intervention services for integrity and uptime.",
-    image: "/WELLHEAD%2C%20VALVE%20MAINTENANCE%20%26%20WELL%20INTERVENTION.jpg",
-    alt: "Wellhead and valve maintenance",
-    href: "/services#wellhead-valve-maintenance-well-intervention",
-  },
-  {
-    title: "Well Completion & Production Services",
-    description:
-      "Completion and production enhancement to optimize reservoir performance.",
-    image: "/petrowave-drill-reporting.jpg",
-    alt: "Well completion and production services",
-    href: "/services#well-completion-production-services",
-  },
-  {
-    title: "Onshore/Offshore Construction & Installation",
-    description:
-      "Full-scale construction and installation with safe, on-time delivery.",
-    image: "/ONSHOREOFFSHORE%20CONSTRUCTION%20%26%20INSTALLATION.jpg",
-    alt: "Onshore and offshore construction",
-    href: "/services#construction-installation-onshore-offshore",
-  },
-  {
-    title: "Facility Maintenance & Inspection",
-    description:
-      "Maintenance and inspection services that extend asset life and reliability.",
-    image: "/petrowave-vaule-sealing.jpg",
-    alt: "Facility maintenance and inspection",
-    href: "/services#facility-maintenance-inspection",
-  },
-  {
-    title: "Mechanical Construction & Fabrication",
-    description: "Precision mechanical works from fabrication to installation.",
-    image: "/MECHANICAL%20CONSTRUCTION%20%26%20FABRICATION.jpg",
-    alt: "Mechanical construction and fabrication",
-    href: "/services#mechanical-construction-fabrication",
-  },
-  {
-    title: "Marine Services & Rental Solutions",
-    description:
-      "Dependable marine logistics, vessel chartering, and equipment rental.",
-    image: "/MARINE%20SERVICES%20%26%20RENTAL%20SOLUTIONS.jpg",
-    alt: "Marine services and rental solutions",
-    href: "/services#marine-services-rental-solutions",
-  },
-  {
-    title: "Electrical, Instrumentation & Control Services",
-    description:
-      "Turnkey electrical and instrumentation solutions for reliable operations.",
-    image: "/ELECTRICAL%2C%20INSTRUMENTATION%20%26%20CONTROL%20SERVICES.jpg",
-    alt: "Electrical instrumentation and control services",
-    href: "/services#electrical-instrumentation-control-eic-services",
-  },
-  {
-    title: "NDT, Corrosion Control & Inspection",
-    description:
-      "Advanced inspection and corrosion management that meets API and ASME standards.",
-    image: "/NDT%2C%20CORROSION%20CONTROL%20%26%20INSPECTION.jpg",
-    alt: "NDT and corrosion control inspection",
-    href: "/services#ndt-corrosion-control-inspection",
-  },
-  {
-    title: "Consultancy, Manpower & Training Services",
-    description:
-      "High-value consultancy, skilled manpower, and specialized training.",
-    image: "/CONSULTANCY%2C%20MANPOWER%20%26%20TRAINING%20SERVICES.jpg",
-    alt: "Consultancy, manpower, and training services",
-    href: "/services#consultancy-manpower-training-services",
-  },
-  {
-    title: "Petroleum Products & Chemicals Supply",
-    description:
-      "Reliable supply of petroleum products and industrial chemicals.",
-    image: "/petro-truck-distribute.jpg",
-    alt: "Petroleum products and chemicals supply",
-    href: "/services#petroleum-products-chemicals-supply",
-  },
-  {
-    title: "Procurement & Supply Chain Management",
-    description:
-      "Global sourcing, logistics coordination, and supplier management.",
+      "Strategic sourcing, logistics, and end-to-end procurement delivery.",
     image: "/PROCUREMENT%20%26%20SUPPLY%20CHAIN%20MANAGEMENT.jpg",
-    alt: "Procurement and supply chain management",
-    href: "/services#procurement-supply-chain-management",
-  },
-  {
-    title: "General Contracts",
-    description:
-      "Comprehensive general contracting services from conception to completion.",
-    image: "/petrowave-contact2.jpg",
-    alt: "General contracting services",
-    href: "/services#general-contracts",
+    alt: "Project procurement and supply chain management",
+    href: "/services#project-procurement-supply-chain-management",
   },
 ];
 

@@ -47,6 +47,13 @@ const strategicPartners = [
   { label: "Neway Valves", src: "/client logos/newway.png" },
 ];
 
+const qhseLogos = [
+  {
+    label: "ISO Certifications",
+    src: "/client logos/download.png",
+  },
+];
+
 export default function Home() {
   const [isCardOpen, setIsCardOpen] = useState(true);
 
@@ -295,6 +302,58 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-white px-6 py-16 sm:py-20">
+        <div className="mx-auto w-full max-w-7xl">
+          <AnimatedReveal>
+            <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+              <article>
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#f47a30]">
+                  QHSE Commitment
+                </p>
+                <h2 className="mt-2 text-3xl font-semibold tracking-tight text-[#132640] sm:text-4xl">
+                  Quality, Health, Safety & Environment (QHSE)
+                </h2>
+                <p className="mt-4 text-sm leading-7 tracking-tight text-slate-700 sm:text-base">
+                  We embed QHSE into every project phase to protect people,
+                  safeguard assets, and meet international standards. Our
+                  systems focus on risk prevention, compliance, and continuous
+                  improvement across all operations.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Link
+                    href="/hse-safety"
+                    className="inline-flex items-center rounded-full bg-[#f47a30] px-5 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-[#162235] transition hover:bg-[#ff8a3d] sm:text-sm"
+                  >
+                    Explore QHSE Safety
+                  </Link>
+                </div>
+              </article>
+
+              <div className="rounded-2xl">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  {qhseLogos.map((logo) => (
+                    <div
+                      key={logo.label}
+                      className="flex items-center justify-center px-2 py-4"
+                    >
+                      <span className="sr-only">{logo.label}</span>
+                      <div className="relative h-16 w-40 lg:h-24 lg:w-56">
+                        <Image
+                          src={logo.src}
+                          alt={logo.label}
+                          fill
+                          sizes="(min-width: 1024px) 224px, 160px"
+                          className="object-contain"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </AnimatedReveal>
+        </div>
+      </section>
     </main>
   );
 }

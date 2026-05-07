@@ -32,54 +32,49 @@ export const navGroups: NavGroup[] = [
     label: "Our Services",
     items: [
       { label: "Service Portfolio", href: "/services" },
-      { label: "Engineering Services", href: "/services#engineering-services" },
       {
-        label: "Wellhead, Valve Maintenance & Well Intervention",
-        href: "/services#wellhead-valve-maintenance-well-intervention",
+        label: "Wellhead / Valves / Christmas Tree / CCUS ",
+        href: "/services#wellhead-valves-christmas-tree-ccus",
       },
       {
-        label: "Well Completion & Production Services",
-        href: "/services#well-completion-production-services",
+        label: "Well Completions & Production Services",
+        href: "/services#well-completions-production-services",
       },
       {
-        label: "Construction & Installation (Onshore/Offshore)",
-        href: "/services#construction-installation-onshore-offshore",
+        label: "Well Intervention and Workover Services",
+        href: "/services#well-intervention-workover-services",
       },
       {
-        label: "Facility Maintenance & Inspection",
-        href: "/services#facility-maintenance-inspection",
+        label:
+          "Zonal Isolation with Bridge Plugs, Cement Retainers & RTTS Packers",
+        href: "/services#zonal-isolation-bridge-plugs-cement-retainers-rtts-packers",
       },
       {
-        label: "Mechanical Construction & Fabrication",
-        href: "/services#mechanical-construction-fabrication",
+        label:
+          "Oilfield Chemicals (Drilling Fluids, Completions, Production & Specialty Chemicals)",
+        href: "/services#oilfield-chemicals",
       },
       {
-        label: "Marine Services & Rental Solutions",
-        href: "/services#marine-services-rental-solutions",
+        label:
+          "Onshore / Offshore Mechanical, Fabrication, Construction & Installation",
+        href: "/services#onshore-offshore-mechanical-fabrication-construction-installation",
       },
       {
-        label: "Electrical, Instrumentation & Control (EIC) Services",
-        href: "/services#electrical-instrumentation-control-eic-services",
+        label:
+          "Advanced NDT & Corrosion Control, Inspection & Maintenance Services",
+        href: "/services#ndt-corrosion-control-inspection-maintenance",
       },
       {
-        label: "NDT, Corrosion Control & Inspection",
-        href: "/services#ndt-corrosion-control-inspection",
+        label: "Manpower Solutions, Consultancy Services & Trainings",
+        href: "/services#manpower-consultancy-trainings",
       },
       {
-        label: "Consultancy, Manpower & Training Services",
-        href: "/services#consultancy-manpower-training-services",
+        label: "Engineering Services",
+        href: "/services#engineering-services",
       },
       {
-        label: "Petroleum Products & Chemicals Supply",
-        href: "/services#petroleum-products-chemicals-supply",
-      },
-      {
-        label: "Procurement & Supply Chain Management",
-        href: "/services#procurement-supply-chain-management",
-      },
-      {
-        label: "General Contracts",
-        href: "/services#general-contracts",
+        label: "Project Procurement & Supply Chain Management",
+        href: "/services#project-procurement-supply-chain-management",
       },
     ],
   },
