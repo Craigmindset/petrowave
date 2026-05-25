@@ -71,7 +71,7 @@ export default function Home() {
   return (
     <main>
       <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#081426] px-6 py-24 text-white sm:py-28 lg:py-36">
-        <div className="absolute inset-0 -z-20 bg-[linear-gradient(112deg,rgba(8,20,38,0.42),rgba(8,20,38,0.55)),url('/oilngas.jpg')] bg-cover bg-center" />
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(112deg,rgba(8,20,38,0.42),rgba(8,20,38,0.35)),url('/petrowave-about-us.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_0%_10%,rgba(244,122,48,0.3),transparent_35%),radial-gradient(circle_at_100%_90%,rgba(255,255,255,0.18),transparent_40%)]" />
 
         <div className="mx-auto grid w-full max-w-7xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
