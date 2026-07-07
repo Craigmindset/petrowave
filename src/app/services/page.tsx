@@ -41,7 +41,7 @@ const services: ServiceItem[] = [
       "Anti-theft solutions (wellhead locking systems, tamper-proof devices, remote surveillance integration)",
       "Spare parts supply and inventory management",
     ],
-    image: "/WELLHEAD%2C%20VALVE%20MAINTENANCE%20%26%20WELL%20INTERVENTION.jpg",
+    image: "/petrowave-site1.jpg",
   },
   {
     id: "well-completions-production-services",

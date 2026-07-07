@@ -15,7 +15,7 @@ const services: ServiceCard[] = [
     title: "Wellhead / Valves / Christmas Tree / CCUS",
     description:
       "Supply, inspection, installation, and maintenance for wellhead systems and CCUs.",
-    image: "/WELLHEAD%2C%20VALVE%20MAINTENANCE%20%26%20WELL%20INTERVENTION.jpg",
+    image: "/petrowave-site1.jpg",
     alt: "Wellhead and valve services",
     href: "/services#wellhead-valves-christmas-tree-ccus",
   },
