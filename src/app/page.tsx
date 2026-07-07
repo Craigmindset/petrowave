@@ -10,8 +10,8 @@ import { ServiceSection } from "@/components/service-section";
 
 const clientLogos = [
   {
-    label: "Addax Petroleum",
-    src: "/client logos/Addax-Petroleum-LOGO.png",
+    label: "Total Energies",
+    src: "/client logos/totalenergies.jpeg",
   },
   {
     label: "NLNG",
@@ -24,17 +24,20 @@ const clientLogos = [
     src: "/client logos/midwestern logo.webp",
   },
   { label: "Oando", src: "/client logos/Oando logo.webp" },
+  { label: "nnpc", src: "/client logos/nnpc.png" },
+
+  { label: "Seplat", src: "/client logos/seplat.png" },
   {
     label: "Renaissance Africa Energy",
     src: "/client logos/RENAISSANCE-AFRICA-ENERGY-LOGO-update.webp",
   },
   { label: "SEEPCO", src: "/client logos/SEEPCO logo.webp" },
-  {
+  /* {
     label: "TotalEnergies",
     src: "/client logos/total-energies-logo-transparent-png-701751694714035bjuuffwgkn.png",
-  },
+  },*/
   { label: "Aradel", src: "/client logos/aradel logo.webp" },
-  { label: "Neconde", src: "/client logos/neconde-logo.jpeg" },
+  { label: "Nepal Energies", src: "/client logos/nepalenergies.png" },
   { label: "Geoplex", src: "/client logos/Geoplex_logo_circle.png" },
   { label: "Daewoo NIG", src: "/client logos/Daewoo Nig.jpeg" },
 ];

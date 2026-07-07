@@ -212,11 +212,11 @@ function MobileNav() {
                 </nav>
 
                 <Link
-                  href="/request-quote"
+                  href="/contact"
                   onClick={() => setOpen(false)}
                   className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-[#f47a30] px-4 py-3 text-sm font-semibold tracking-[-0.015em] text-white transition hover:bg-[#ff8a3d]"
                 >
-                  Request A Quote
+                  Contact
                 </Link>
               </motion.aside>
             </Dialog.Content>
@@ -250,15 +250,6 @@ export function SiteHeader() {
         </Link>
 
         <DesktopNav />
-
-        <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            href="/request-quote"
-            className="inline-flex items-center rounded-full border border-[#f47a30] bg-[#f47a30] px-4 py-2 text-sm font-semibold tracking-[-0.015em] text-[#1a2434] transition hover:bg-[#ff8a3d]"
-          >
-            Request A Quote
-          </Link>
-        </div>
 
         <MobileNav />
       </div>
